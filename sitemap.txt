@@ -1,2 +1,2 @@
-http://www.example.com/2013/06/running-man.html
-http://www.example.com/About.html
+http://soegaard.github.io/blog/2013/06/21/running-man/
+http://soegaard.github.io/About.html

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <rss version="2.0">
  <channel>
-  <title>Untitled Site: Posts tagged 'running man'</title>
-  <description>Untitled Site: Posts tagged 'running man'</description>
-  <link>http://www.example.com/tags/running-man.html</link>
+  <title>Everything Racket: Posts tagged 'running man'</title>
+  <description>Everything Racket: Posts tagged 'running man'</description>
+  <link>http://soegaard.github.io/tags/running-man.html</link>
   <lastBuildDate>Fri, 21 Jun 2013 12:38:51 CEST</lastBuildDate>
   <pubDate>Fri, 21 Jun 2013 12:38:51 CEST</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>Running Man</title>
-   <link>http://www.example.com/2013/06/running-man.html?utm_source=running-man&amp;utm_medium=RSS</link>
-   <guid>urn:http-www-example-com:-2013-06-running-man-html</guid>
+   <link>http://soegaard.github.io/blog/2013/06/21/running-man/?utm_source=running-man&amp;utm_medium=RSS</link>
+   <guid>urn:http-soegaard-github-io:-blog-2013-06-21-running-man</guid>
    <pubDate>Fri, 21 Jun 2013 12:38:51 CEST</pubDate>
    <description>
-&lt;html&gt;
+&lt;html&gt;&lt;img src="http://soegaard.github.io/img/1x1.gif?utm_source=running-man&amp;amp;utm_medium=RSS&amp;amp;utm_campaign=%2Fblog%2F2013%2F06%2F21%2Frunning-man%2F" height="1" width="1" /&gt;
  &lt;p&gt;Have you ever noticed the little man in the bottom right corner?&lt;/p&gt;
  &lt;p&gt;At first sight he looks hand drawn, but the appearance deceives.
 The little guy is in fact ray traced. Neil Toronto the man behind

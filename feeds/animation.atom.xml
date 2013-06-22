@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
- <title type="text">Untitled Site: Posts tagged 'animation'</title>
- <link rel="self" href="http://www.example.com/feeds/animation.atom.xml" />
- <link href="http://www.example.com/tags/animation.html" />
- <id>urn:http-www-example-com:-tags-animation-html</id>
+ <title type="text">Everything Racket: Posts tagged 'animation'</title>
+ <link rel="self" href="http://soegaard.github.io/feeds/animation.atom.xml" />
+ <link href="http://soegaard.github.io/tags/animation.html" />
+ <id>urn:http-soegaard-github-io:-tags-animation-html</id>
  <updated>2013-06-21T12:38:51Z</updated>
  <entry>
   <title type="text">Running Man</title>
-  <link rel="alternate" href="http://www.example.com/2013/06/running-man.html?utm_source=animation&amp;utm_medium=Atom" />
-  <id>urn:http-www-example-com:-2013-06-running-man-html</id>
+  <link rel="alternate" href="http://soegaard.github.io/blog/2013/06/21/running-man/?utm_source=animation&amp;utm_medium=Atom" />
+  <id>urn:http-soegaard-github-io:-blog-2013-06-21-running-man</id>
   <published>2013-06-21T12:38:51Z</published>
   <updated>2013-06-21T12:38:51Z</updated>
   <author>
-   <name>The Unknown Author</name></author>
+   <name>Jens Axel Søgaard</name></author>
   <content type="html">
-&lt;html&gt;
+&lt;html&gt;&lt;img src="http://soegaard.github.io/img/1x1.gif?utm_source=animation&amp;amp;utm_medium=Atom&amp;amp;utm_campaign=%2Fblog%2F2013%2F06%2F21%2Frunning-man%2F" height="1" width="1" /&gt;
  &lt;p&gt;Have you ever noticed the little man in the bottom right corner?&lt;/p&gt;
  &lt;p&gt;At first sight he looks hand drawn, but the appearance deceives.
 The little guy is in fact ray traced. Neil Toronto the man behind
