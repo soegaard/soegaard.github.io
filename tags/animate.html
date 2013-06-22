@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Most of the <head> section you can leave alone.  Notice some
+         template variables like `title`, `description` etc. which you
+         could also use in other parts of this template if you
+         wish. -->
+    <meta charset="utf-8" />
+    <title>Posts tagged 'animate'</title>
+    <meta name="description" content="Posts tagged 'animate'">
+    <meta name="author"      content="Jens Axel Søgaard">
+    <meta name="keywords"    content="animate">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.example.com/tags/animate.html">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/cerulean/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/racket.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link ref="alternate" type="application/atom+xml"
+          href="/feeds/animate.atom.xml" title="Atom Feed">
+    <link ref="alternate" type="application/rss+xml"
+          href="/feeds/animate.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-xxxxx']);
+      _gaq.push(['_setDomainName', 'soegaard.github.io']);
+      _gaq.push(['_trackPageview']);
+      setTimeout(function(){_gaq.push(['_trackEvent', '30_seconds', 'read'])}, 30000); // http://drawingablank.me/blog/fix-your-bounce-rate.html
+      (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <!-- Notice we can define Racket functions. Here's a
+                 helper to add class="active" to a nav bar item if it
+                 is for this page (as indiated by `uri-path`) -->
+            <li>
+              <a href="/index.html" class="brand">All Posts</a>
+            </li> 
+            <li>
+              <a href="/About.html">About</a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- This div's class should be "container-fluid" if you're using
+         Bootstrap's responsive CSS, else "container". -->
+    <div class="container-fluid">
+      <!-- This div's class should be "row-fluid" if you're using
+           Bootstrap's responsive CSS, else "row". -->
+      <div class="row-fluid">
+        <!-- Remember that Twitter Bootstrap has a 12 cell model. The
+             spanN classes should add up to 12.  For instance 3
+             "span4" divs, or 2 "span6" divs. In this example the main
+             content is "span9", plsu a "span3" right sidebar. -->
+        <!-- Main column -->
+        <div id="content" class="span9">
+          <!-- To put something only on the home page, check for
+               `uri-path` being "/index.html" -->
+
+          <!-- Index pages for posts have non-#f `tag` -->
+          <h1>Posts tagged <em>animate</em></h1>
+          <!-- The main page contents are in `contents` -->
+
+<article class="index-post">
+ <header>
+  <h2><a href="/2013/06/running-man.html">Running Man</a></h2>
+  <p class="date-and-tags">
+   <time datetime="2013-06-21" pubdate="true">2013-06-21</time> :: <a href="/tags/animation.html">animation</a>, <a href="/tags/animate.html">animate</a>, <a href="/tags/running-man.html">running man</a>, <a href="/tags/icons.html">icons</a></p></header>
+ <div class="entry-content">
+  <p>Have you ever noticed the little man in the bottom right corner?</p>
+  <p>At first sight he looks hand drawn, but the appearance deceives.
+The little guy is in fact ray traced. Neil Toronto the man behind
+the ray tracing code, was inspired by the animation of the main
+character in the Commodore 64 classic
+<a href="http://en.wikipedia.org/wiki/Impossible_Mission">Impossible Mission</a>.</p>
+  <p>Buried in the documentation of the <span class="RktSym">icons</span> library, one finds
+the function <span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29">running-stickman-icon</a></span>. The function can be used
+to generate frames of a running man animation - it even allows us
+to change colors and size of the running man.</p>
+  <p>The first parameter of <span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29">running-stickman-icon</a></span> is the
+time, <span class="RktSym">t</span>, a number between 0 and 1. Let&rsquo;s see 10 frames
+of the default running man.</p>
+  <div class="SCodeFlow">
+   <table cellspacing="0" class="RktBlk">
+    <tbody>
+     <tr>
+      <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._require%29%29">require</a></span><span class="hspace">&nbsp;</span><span class="RktSym">images/icons/stickman</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td>
+       <table cellspacing="0">
+        <tbody>
+         <tr>
+          <td></td></tr></tbody></table></td></tr>
+     <tr>
+      <td>
+       <table cellspacing="0" class="RktBlk">
+        <tbody>
+         <tr>
+          <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%2Flist%29%29">for/list</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktPn">[</span><span class="RktSym">t</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/sequences.html#%28def._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._in-range%29%29">in-range</a></span><span class="hspace">&nbsp;</span><span class="RktVal">0</span><span class="hspace">&nbsp;</span><span class="RktVal">1</span><span class="hspace">&nbsp;</span><span class="RktVal">1/10</span><span class="RktPn">)</span><span class="RktPn">]</span><span class="RktPn">)</span></td></tr>
+         <tr>
+          <td><span class="RktPlain"><span class="hspace">&nbsp;&nbsp;</span></span><span class="hspace">&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29">running-stickman-icon</a></span><span class="hspace">&nbsp;</span><span class="RktSym">t</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr></tbody></table></td></tr>
+     <tr>
+      <td>
+       <p><span class="RktRes">(list </span><img src="/img/2013-06-21-running-man/pict.png" alt="image" height="24" width="20" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/2013-06-21-running-man/pict_2.png" alt="image" height="24" width="20" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/2013-06-21-running-man/pict_3.png" alt="image" height="24" width="20" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/2013-06-21-running-man/pict_4.png" alt="image" height="24" width="20" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/2013-06-21-running-man/pict_5.png" alt="image" height="24" width="20" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/2013-06-21-running-man/pict_6.png" alt="image" height="24" width="20" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/2013-06-21-running-man/pict_7.png" alt="image" height="24" width="20" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/2013-06-21-running-man/pict_8.png" alt="image" height="24" width="20" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/2013-06-21-running-man/pict_9.png" alt="image" height="24" width="20" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/2013-06-21-running-man/pict_10.png" alt="image" height="24" width="20" /><span class="RktRes">)</span></p></td></tr></tbody></table></div>
+  <p>The default man is a little small, but we can easily change both
+the size and the colors of the man.</p>
+  <div class="SCodeFlow">
+   <table cellspacing="0" class="RktBlk">
+    <tbody>
+     <tr>
+      <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._require%29%29">require</a></span><span class="hspace">&nbsp;</span><span class="RktSym">images/icons/stickman</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td>
+       <table cellspacing="0">
+        <tbody>
+         <tr>
+          <td></td></tr></tbody></table></td></tr>
+     <tr>
+      <td>
+       <table cellspacing="0" class="RktBlk">
+        <tbody>
+         <tr>
+          <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29">running-stickman-icon</a></span><span class="hspace">&nbsp;</span><span class="RktVal">0</span><span class="hspace">&nbsp;</span><span class="RktPn">#:height</span><span class="hspace">&nbsp;</span><span class="RktVal">128</span></td></tr>
+         <tr>
+          <td><span class="RktPlain"><span class="hspace">&nbsp;&nbsp;</span></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktPn">#:head-color</span><span class="hspace">&nbsp;</span><span class="RktVal">"white"</span></td></tr>
+         <tr>
+          <td><span class="RktPlain"><span class="hspace">&nbsp;&nbsp;</span></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktPn">#:arm-color</span><span class="hspace">&nbsp;&nbsp;</span><span class="RktVal">"gray"</span></td></tr>
+         <tr>
+          <td><span class="RktPlain"><span class="hspace">&nbsp;&nbsp;</span></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktPn">#:body-color</span><span class="hspace">&nbsp;</span><span class="RktVal">"lightblue"</span><span class="RktPn">)</span></td></tr></tbody></table></td></tr>
+     <tr>
+      <td>
+       <p><img src="/img/2013-06-21-running-man/pict_11.png" alt="image" height="128" width="104" /></p></td></tr></tbody></table></div>
+  <p>It is now easy to create an animation of the running man.
+First we need a function <span class="RktSym">render-man</span> that given a
+frame number will produce an image. Then the function <span class="RktSym">animate</span>
+from <span class="RktSym">2htdp/image</span> can be used to display the animation.</p>
+  <p>To get a fluent motion we will use <span class="RktSym">N</span><span class="RktSym">=28</span> frames
+in one cycle of the animation. Frame 0, 28, 56 and so forth will
+be the same. If <span class="RktSym">n</span> is the frame number (of the animation),
+then <span class="RktPn">(</span><span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._remainder%29%29">remainder</a></span><span class="stt"> </span><span class="RktSym">n</span><span class="stt"> </span><span class="RktSym">N</span><span class="RktPn">)</span>
+is the frame number in the 0 to <span class="RktSym">N-1</span> range. Divide by <span class="RktSym">n</span>
+to get the time <span class="RktSym">t</span> in the interval <span class="RktPn">[</span><span class="RktVal">0</span><span class="stt"> </span><span class="RktRdr">,</span><span class="RktVal">1</span><span class="RktPn">]</span>.</p>
+  <div class="SCodeFlow">
+   <table cellspacing="0" class="RktBlk">
+    <tbody>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktSym">N</span><span class="hspace">&nbsp;</span><span class="RktVal">28</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">render-man</span><span class="hspace">&nbsp;</span><span class="RktSym">n</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="hspace">&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktSym">t</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._%2F%29%29">/</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._remainder%29%29">remainder</a></span><span class="hspace">&nbsp;</span><span class="RktSym">n</span><span class="hspace">&nbsp;</span><span class="RktSym">N</span><span class="RktPn">)</span><span class="hspace">&nbsp;</span><span class="RktSym">N</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="hspace">&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/teachpack/2htdpimage.html#%28def._%28%28lib._2htdp%2Fimage..rkt%29._freeze%29%29">freeze</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29">running-stickman-icon</a></span><span class="hspace">&nbsp;</span><span class="RktSym">t</span><span class="hspace">&nbsp;</span><span class="RktPn">#:height</span><span class="hspace">&nbsp;</span><span class="RktVal">128</span></td></tr>
+     <tr>
+      <td><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktPn">#:head-color</span><span class="hspace">&nbsp;</span><span class="RktVal">"white"</span></td></tr>
+     <tr>
+      <td><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktPn">#:arm-color</span><span class="hspace">&nbsp;&nbsp;</span><span class="RktVal">"gray"</span></td></tr>
+     <tr>
+      <td><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktPn">#:body-color</span><span class="hspace">&nbsp;</span><span class="RktVal">"lightblue"</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr></tbody></table></div>
+  <p>Since the result of <span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29">running-stickman-icon</a></span> is a <span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/draw/bitmap_.html">bitmap%</a></span>
+object, we need to "<span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/teachpack/2htdpimage.html#%28def._%28%28lib._2htdp%2Fimage..rkt%29._freeze%29%29">freeze</a></span>" it in order to use it with <span class="RktSym">2htdp/universe</span>.</p>
+  <p>The running man is now ready for action:</p>
+  <div class="SCodeFlow">
+   <table cellspacing="0" class="RktBlk">
+    <tbody>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._require%29%29">require</a></span><span class="hspace">&nbsp;</span><span class="RktSym">images/icons/stickman</span><span class="hspace">&nbsp;</span><span class="RktSym">2htdp/image</span><span class="hspace">&nbsp;</span><span class="RktSym">2htdp/universe</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktSym">N</span><span class="hspace">&nbsp;</span><span class="RktVal">28</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">render-man</span><span class="hspace">&nbsp;</span><span class="RktSym">n</span><span class="RktPn">)</span><span class="hspace">&nbsp;</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/stx-patterns.html#%28form._%28%28lib._racket%2Fprivate%2Fstxcase-scheme..rkt%29._......%29%29">...</a></span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym">animate</span><span class="hspace">&nbsp;</span><span class="RktSym">render-man</span><span class="RktPn">)</span></td></tr></tbody></table></div>
+  <p>Those of you following this blog post in
+<a href="http://docs.racket-lang.org/drracket/index.html?q=drracket">DrRacket</a>
+are probably not too impressed.</p>
+  <p>Can you spot the problem?</p>
+  <p>The animation is slow and stutters. For each frame the ray tracer is activated
+to produce an image. Since <span class="RktSym">animate</span> shows 28 frames pr second, the
+function <span class="RktSym">render-man</span> is not allowed to use more than 1/28 second to
+generate each image - and for large heights the ray tracer is not fast enough.</p>
+  <p>The solution is to prerender the images of the running man before starting
+the animation. This way each image is generated only once.</p>
+  <div class="SCodeFlow">
+   <table cellspacing="0" class="RktBlk">
+    <tbody>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._require%29%29">require</a></span><span class="hspace">&nbsp;</span><span class="RktSym">images/icons/stickman</span><span class="hspace">&nbsp;</span><span class="RktSym">2htdp/image</span><span class="hspace">&nbsp;</span><span class="RktSym">2htdp/universe</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktSym">N</span><span class="hspace">&nbsp;</span><span class="RktVal">28</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">render-man</span><span class="hspace">&nbsp;</span><span class="RktSym">n</span><span class="RktPn">)</span><span class="hspace">&nbsp;</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/stx-patterns.html#%28form._%28%28lib._racket%2Fprivate%2Fstxcase-scheme..rkt%29._......%29%29">...</a></span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktSym">men</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%2Fvector%29%29">for/vector</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktPn">[</span><span class="RktSym">n</span><span class="hspace">&nbsp;</span><span class="RktSym">N</span><span class="RktPn">]</span><span class="RktPn">)</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">render-man</span><span class="hspace">&nbsp;</span><span class="RktSym">n</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">man</span><span class="hspace">&nbsp;</span><span class="RktSym">n</span><span class="RktPn">)</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/vectors.html#%28def._%28%28quote._~23~25kernel%29._vector-ref%29%29">vector-ref</a></span><span class="hspace">&nbsp;</span><span class="RktSym">men</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._remainder%29%29">remainder</a></span><span class="hspace">&nbsp;</span><span class="RktSym">n</span><span class="hspace">&nbsp;</span><span class="RktSym">N</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr>
+     <tr>
+      <td><span class="RktPn">(</span><span class="RktSym">animate</span><span class="hspace">&nbsp;</span><span class="RktSym">man</span><span class="RktPn">)</span></td></tr></tbody></table></div></div></article>
+        </div>
+        <!-- Right column -->
+        <div id="right-sidebar" class="span3">
+          <!-- `tags/feeds` is a list of tags and feeds -->
+
+<p>Tags:
+ <ul>
+  <li><a href="/tags/animate.html">animate</a>&nbsp;(1) <a href="/feeds/animate.atom.xml"><img src="/img/feed.png" /></a></li>
+  <li><a href="/tags/animation.html">animation</a>&nbsp;(1) <a href="/feeds/animation.atom.xml"><img src="/img/feed.png" /></a></li>
+  <li><a href="/tags/icons.html">icons</a>&nbsp;(1) <a href="/feeds/icons.atom.xml"><img src="/img/feed.png" /></a></li>
+  <li><a href="/tags/running-man.html">running man</a>&nbsp;(1) <a href="/feeds/running man.atom.xml"><img src="/img/feed.png" /></a></li></ul>
+ <p><a href="/index.html">All Posts</a> <a href="/feeds/all.atom.xml"><img src="/img/feed.png" /></a></p></p>
+          <!-- Example of a Twitter follow button -->
+          <a href="https://twitter.com/jasoegaard"
+             class="twitter-follow-button"
+             data-show-count="false"
+             data-lang="en">
+            "Follow jasoegaard"
+          </a>
+          <script type="text/javascript">
+            !function(d,s,id){
+                var js,fjs=d.getElementsByTagName(s)[0];
+                if(!d.getElementById(id)){
+                    js=d.createElement(s);
+                    js.id=id;
+                    js.src="//platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js,fjs);
+                }
+            }(document,"script","twitter-wjs");
+          </script>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
