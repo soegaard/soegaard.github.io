@@ -8,7 +8,7 @@ Tags: animation, animate, running man, icons
                      (except-in racket/draw make-color make-pen)))
 @(define my-eval (make-base-eval))
 
-Have you ever noticed the little man in the bottom right corner?
+Have you ever noticed the little man in the bottom right corner of DrRacket?
 
 At first sight he looks hand drawn, but the appearance deceives.
 The little guy is in fact ray traced. Neil Toronto the man behind
@@ -72,7 +72,7 @@ The running man is now ready for action:
 (define (render-man n) ...)
 (animate render-man)]
 
-Those of you following this blog post in 
+Those of you who tried the above in 
 @hyperlink["http://docs.racket-lang.org/drracket/index.html?q=drracket"]{DrRacket}
 are probably not too impressed. 
 
@@ -95,5 +95,44 @@ the animation. This way each image is generated only once.
 (define (man n) (vector-ref men (remainder n N)))
 (animate man)]
 
+@(require (except-in file/gif color?))
+@(require images/icons/stickman
+          (except-in racket/draw make-color make-pen) 2htdp/universe 
+          racket/class racket/bytes 2htdp/image)
+@(begin
+   (define N 28)
+   (define (render-man n)
+     (define t (/ (remainder n N) N))
+     (define man (running-stickman-icon 
+                  t #:height 128 
+                  #:head-color "white" 
+                  #:arm-color "gray" 
+                  #:body-color "lightblue"))
+     ; man has a transparant background
+     ; since gifs have no alpha channel, we make sure the background is white
+     (define man/white (make-object bitmap% (image-width man) (image-height man)))
+     (define dc (new bitmap-dc% [bitmap man/white]))
+     (send dc set-background "white")
+     (send dc clear)
+     (send dc draw-bitmap man 0 0)
+     man/white)
+   (define men (for/vector ([n N]) (render-man n)))
+   (define (man n) (vector-ref men (remainder n N)))
+   (define port (open-output-file "running-man.gif" #:exists 'replace))
+   (define-values (max-w max-h) 
+     (for/fold ([w 1] [h 1]) ([m men])
+       (values (max (image-width m) w) 
+               (max (image-height m) h))))
+   (define stream (gif-start port max-w max-h 0 #f))   
+   (gif-add-loop-control stream 0) ; loop images
+   (for ([m men])
+     (define w (image-width m))
+     (define h (image-height m))
+     (define pixels (make-bytes (* 4 w h) 0))
+     (send m get-argb-pixels 0 0 w h pixels) ; mutates pixels
+     (define-values (bytes colormap transparent) (quantize pixels))
+     (gif-add-image stream 0 0 w h #f colormap bytes))   
+   (gif-end stream)
+   (close-output-port port))
 
-
+@image{running-man.gif}
