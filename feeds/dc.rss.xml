@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <rss version="2.0">
  <channel>
-  <title>Everything Racket: All Posts</title>
-  <description>Everything Racket: All Posts</description>
-  <link>http://soegaard.github.io/index.html</link>
+  <title>Everything Racket: Posts tagged 'dc'</title>
+  <description>Everything Racket: Posts tagged 'dc'</description>
+  <link>http://soegaard.github.io/tags/dc.html</link>
   <lastBuildDate>Thu, 27 Jun 2013 21:25:40 CEST</lastBuildDate>
   <pubDate>Thu, 27 Jun 2013 21:25:40 CEST</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>Drawing Bezier Curves</title>
-   <link>http://soegaard.github.io/blog/2013/06/27/drawing-bezier-curves/?utm_source=all&amp;utm_medium=RSS</link>
+   <link>http://soegaard.github.io/blog/2013/06/27/drawing-bezier-curves/?utm_source=dc&amp;utm_medium=RSS</link>
    <guid>urn:http-soegaard-github-io:-blog-2013-06-27-drawing-bezier-curves</guid>
    <pubDate>Thu, 27 Jun 2013 21:25:40 CEST</pubDate>
    <description>
-&lt;html&gt;&lt;img src="http://soegaard.github.io/img/1x1.gif?utm_source=all&amp;amp;utm_medium=RSS&amp;amp;utm_campaign=%2Fblog%2F2013%2F06%2F27%2Fdrawing-bezier-curves%2F" height="1" width="1" /&gt;
+&lt;html&gt;&lt;img src="http://soegaard.github.io/img/1x1.gif?utm_source=dc&amp;amp;utm_medium=RSS&amp;amp;utm_campaign=%2Fblog%2F2013%2F06%2F27%2Fdrawing-bezier-curves%2F" height="1" width="1" /&gt;
  &lt;p&gt;This blog post shows to use the &lt;a class="RktModLink" data-pltdoc="x" href="http://docs.racket-lang.org/draw/index.html"&gt;&lt;span class="RktSym"&gt;racket/draw&lt;/span&gt;&lt;/a&gt; library
 to draw Bezier curves.&lt;/p&gt;
  &lt;p&gt;A Bezier curve connects two points, so we need a way to represent points.&lt;/p&gt;
@@ -156,212 +156,4 @@ on a bitmap.&lt;/p&gt;
       &lt;td&gt;&lt;a class="plainlink" data-pltdoc="x" href="#%28elem._%28chunk._~3cdraw-dachshund~3e~3a1%29%29"&gt;&amp;lt;draw-dachshund&amp;gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
      &lt;tr&gt;
       &lt;td&gt;&lt;a class="plainlink" data-pltdoc="x" href="#%28elem._%28chunk._~3cexample~3e~3a1%29%29"&gt;&amp;lt;example&amp;gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;
- &lt;p&gt;&lt;img src="/img/2013-06-27-drawing-a-bezier-curve/pict.png" alt="image" height="100" width="400" /&gt;&lt;/p&gt;&lt;/html&gt;</description></item>
-  <item>
-   <title>Summer Project: Meta(font|post) in Racket</title>
-   <link>http://soegaard.github.io/blog/2013/06/21/summer-project-meta-font-post-in-racket/?utm_source=all&amp;utm_medium=RSS</link>
-   <guid>urn:http-soegaard-github-io:-blog-2013-06-21-summer-project-meta-font-post-in-racket</guid>
-   <pubDate>Fri, 21 Jun 2013 12:38:51 CEST</pubDate>
-   <description>
-&lt;html&gt;&lt;img src="http://soegaard.github.io/img/1x1.gif?utm_source=all&amp;amp;utm_medium=RSS&amp;amp;utm_campaign=%2Fblog%2F2013%2F06%2F21%2Fsummer-project-meta-font-post-in-racket%2F" height="1" width="1" /&gt;
- &lt;p&gt;The summer holiday is getting closer. This means there is time to focus on hacking.
-Last year my summer project was to
-implement a &lt;a href="http://docs.racket-lang.org/math/matrices.html?q=matrix"&gt;matrix&lt;/a&gt;
-library and a
-&lt;a href="http://docs.racket-lang.org/math/number-theory.html?q=matrix"&gt;number theory&lt;/a&gt;
-library.&lt;/p&gt;
- &lt;p&gt;This year I have decided to write a graphics library inspired by the approach taken by
-&lt;a href="http://en.wikipedia.org/wiki/Metafont"&gt;Metafont&lt;/a&gt;, &lt;a href="http://en.wikipedia.org/wiki/MetaPost"&gt;Metapost&lt;/a&gt;
-and &lt;a href="http://www.texample.net/tikz/"&gt;Tikz&lt;/a&gt;. The basic concept in these libraries is a &lt;span style="font-style: italic"&gt;path&lt;/span&gt;.
-The existing Racket library &lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/pict/Pict_Datatype.html#%28def._%28%28lib._pict%2Fmain..rkt%29._pict%29%29"&gt;pict&lt;/a&gt;&lt;/span&gt; on the other hand is based on &lt;span style="font-style: italic"&gt;pictures&lt;/span&gt;.&lt;/p&gt;
- &lt;p&gt;Bezier curves will be used to draw the paths. Drawing a Bezier curve is straight forward;
-the builtin graphics library, &lt;span class="RktSym"&gt;racket/draw&lt;/span&gt; has support for this
-in the form of
-&lt;a href="http://docs.racket-lang.org/search/index.html?q=curve-to"&gt;curve-to&lt;/a&gt;.&lt;/p&gt;
- &lt;p&gt;What is needed is convenient ways of &lt;span style="font-style: italic"&gt;specifying&lt;/span&gt; and &lt;span style="font-style: italic"&gt;manipulating&lt;/span&gt; paths.&lt;/p&gt;
- &lt;p&gt;The first problem will be this: Given points &lt;span style="font-style: italic"&gt;P0&lt;/span&gt;, &lt;span style="font-style: italic"&gt;P3&lt;/span&gt;, &lt;span style="font-style: italic"&gt;P6&lt;/span&gt;, ..., &lt;span style="font-style: italic"&gt;Pn&lt;/span&gt;.
-Draw a "pretty" curve through these points. That is, determine which Bezier curves
-is to be drawn between &lt;span style="font-style: italic"&gt;P0&lt;/span&gt; and &lt;span style="font-style: italic"&gt;P3&lt;/span&gt;, between &lt;span style="font-style: italic"&gt;P3&lt;/span&gt; and &lt;span style="font-style: italic"&gt;P6&lt;/span&gt; etc.&lt;/p&gt;
- &lt;p&gt;&lt;a href="http://ect.bell-labs.com/who/hobby/index.shtml"&gt;John D. Hobby&lt;/a&gt; and &lt;a href="http://www-cs-faculty.stanford.edu/~uno/"&gt;Donald Knuth&lt;/a&gt; introduced
-the algorithm now known as "Hobby&amp;rsquo;s Algorithm" in Metafont to solve this problem. It is
-the central algorithm of the library.&lt;/p&gt;
- &lt;p&gt;The second problem is to introduce syntax for specifying paths. There is no doubt that
-the popularity of MetaPost in TeX circles is the concise syntax - so I&amp;rsquo;ll see how
-much it makes sense to steal.&lt;/p&gt;
- &lt;p&gt;The third problem is to support for specifying points based on linear equations. Luckily the
-grunt works is already done - the matrix library contains equation solvers.&lt;/p&gt;
- &lt;p&gt;Breaking large project into chunks help tremendously. Just witness
-how fast the number of completed Racket tasks went up on
-&lt;a href="http://rosettacode.org/wiki/Category:Racket"&gt;RosettaCode&lt;/a&gt;.&lt;/p&gt;
- &lt;ol&gt;
-  &lt;li&gt;
-   &lt;p&gt;Draw a Bezier curve using &lt;span class="RktSym"&gt;racket/draw&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Explain Hobby&amp;rsquo;s algorithm&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Implement Hobby&amp;rsquo;s algorithm&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Design syntax for paths&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Implement syntax for paths&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Document syntax for paths&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Predefinitions for standard paths&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Examples - inspration from the Metafontbook and Tikz&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Linear expressions and "linear variables"&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Syntax for linear expressions and linear variables.&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;From fonts to paths&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Higher order path operations&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Bounding boxes for paths&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Intersections between curves&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Coloration of areas&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Bitmaps&lt;/p&gt;&lt;/li&gt;
-  &lt;li&gt;
-   &lt;p&gt;Relation to picts?&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/html&gt;</description></item>
-  <item>
-   <title>Running Man</title>
-   <link>http://soegaard.github.io/blog/2013/06/21/running-man/?utm_source=all&amp;utm_medium=RSS</link>
-   <guid>urn:http-soegaard-github-io:-blog-2013-06-21-running-man</guid>
-   <pubDate>Fri, 21 Jun 2013 12:38:51 CEST</pubDate>
-   <description>
-&lt;html&gt;&lt;img src="http://soegaard.github.io/img/1x1.gif?utm_source=all&amp;amp;utm_medium=RSS&amp;amp;utm_campaign=%2Fblog%2F2013%2F06%2F21%2Frunning-man%2F" height="1" width="1" /&gt;
- &lt;p&gt;Have you ever noticed the little man in the bottom right corner of DrRacket?&lt;/p&gt;
- &lt;p&gt;At first sight he looks hand drawn, but the appearance deceives.
-The little guy is in fact ray traced. Neil Toronto the man behind
-the ray tracing code, was inspired by the animation of the main
-character in the Commodore 64 classic
-&lt;a href="http://en.wikipedia.org/wiki/Impossible_Mission"&gt;Impossible Mission&lt;/a&gt;.&lt;/p&gt;
- &lt;p&gt;Buried in the documentation of the &lt;span class="RktSym"&gt;icons&lt;/span&gt; library, one finds
-the function &lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29"&gt;running-stickman-icon&lt;/a&gt;&lt;/span&gt;. The function can be used
-to generate frames of a running man animation - it even allows us
-to change colors and size of the running man.&lt;/p&gt;
- &lt;p&gt;The first parameter of &lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29"&gt;running-stickman-icon&lt;/a&gt;&lt;/span&gt; is the
-time, &lt;span class="RktSym"&gt;t&lt;/span&gt;, a number between 0 and 1. Let&amp;rsquo;s see 10 frames
-of the default running man.&lt;/p&gt;
- &lt;div class="SCodeFlow"&gt;
-  &lt;table cellspacing="0" class="RktBlk"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._require%29%29"&gt;require&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;images/icons/stickman&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;
-      &lt;table cellspacing="0"&gt;
-       &lt;tbody&gt;
-        &lt;tr&gt;
-         &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;
-      &lt;table cellspacing="0" class="RktBlk"&gt;
-       &lt;tbody&gt;
-        &lt;tr&gt;
-         &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%2Flist%29%29"&gt;for/list&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktPn"&gt;[&lt;/span&gt;&lt;span class="RktSym"&gt;t&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/sequences.html#%28def._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._in-range%29%29"&gt;in-range&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;0&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;1&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;1/10&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;]&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;
-         &lt;td&gt;&lt;span class="RktPlain"&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29"&gt;running-stickman-icon&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;t&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;
-      &lt;p&gt;&lt;span class="RktRes"&gt;(list &lt;/span&gt;&lt;img src="/img/2013-06-21-running-man/pict.png" alt="image" height="24" width="20" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/2013-06-21-running-man/pict_2.png" alt="image" height="24" width="20" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/2013-06-21-running-man/pict_3.png" alt="image" height="24" width="20" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/2013-06-21-running-man/pict_4.png" alt="image" height="24" width="20" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/2013-06-21-running-man/pict_5.png" alt="image" height="24" width="20" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/2013-06-21-running-man/pict_6.png" alt="image" height="24" width="20" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/2013-06-21-running-man/pict_7.png" alt="image" height="24" width="20" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/2013-06-21-running-man/pict_8.png" alt="image" height="24" width="20" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/2013-06-21-running-man/pict_9.png" alt="image" height="24" width="20" /&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktRes"&gt;&lt;/span&gt;&lt;img src="/img/2013-06-21-running-man/pict_10.png" alt="image" height="24" width="20" /&gt;&lt;span class="RktRes"&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
- &lt;p&gt;The default man is a little small, but we can easily change both
-the size and the colors of the man.&lt;/p&gt;
- &lt;div class="SCodeFlow"&gt;
-  &lt;table cellspacing="0" class="RktBlk"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._require%29%29"&gt;require&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;images/icons/stickman&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;
-      &lt;table cellspacing="0"&gt;
-       &lt;tbody&gt;
-        &lt;tr&gt;
-         &lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;
-      &lt;table cellspacing="0" class="RktBlk"&gt;
-       &lt;tbody&gt;
-        &lt;tr&gt;
-         &lt;td&gt;&lt;span class="stt"&gt;&amp;gt; &lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29"&gt;running-stickman-icon&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;0&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:height&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;128&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;
-         &lt;td&gt;&lt;span class="RktPlain"&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:head-color&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"white"&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;
-         &lt;td&gt;&lt;span class="RktPlain"&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:arm-color&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"gray"&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;
-         &lt;td&gt;&lt;span class="RktPlain"&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:body-color&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"lightblue"&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;
-      &lt;p&gt;&lt;img src="/img/2013-06-21-running-man/pict_11.png" alt="image" height="128" width="104" /&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
- &lt;p&gt;It is now easy to create an animation of the running man.
-First we need a function &lt;span class="RktSym"&gt;render-man&lt;/span&gt; that given a
-frame number will produce an image. Then the function &lt;span class="RktSym"&gt;animate&lt;/span&gt;
-from &lt;span class="RktSym"&gt;2htdp/image&lt;/span&gt; can be used to display the animation.&lt;/p&gt;
- &lt;p&gt;To get a fluent motion we will use &lt;span class="RktSym"&gt;N&lt;/span&gt;&lt;span class="RktSym"&gt;=28&lt;/span&gt; frames
-in one cycle of the animation. Frame 0, 28, 56 and so forth will
-be the same. If &lt;span class="RktSym"&gt;n&lt;/span&gt; is the frame number (of the animation),
-then &lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._remainder%29%29"&gt;remainder&lt;/a&gt;&lt;/span&gt;&lt;span class="stt"&gt; &lt;/span&gt;&lt;span class="RktSym"&gt;n&lt;/span&gt;&lt;span class="stt"&gt; &lt;/span&gt;&lt;span class="RktSym"&gt;N&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;
-is the frame number in the 0 to &lt;span class="RktSym"&gt;N-1&lt;/span&gt; range. Divide by &lt;span class="RktSym"&gt;n&lt;/span&gt;
-to get the time &lt;span class="RktSym"&gt;t&lt;/span&gt; in the interval &lt;span class="RktPn"&gt;[&lt;/span&gt;&lt;span class="RktVal"&gt;0&lt;/span&gt;&lt;span class="stt"&gt; &lt;/span&gt;&lt;span class="RktRdr"&gt;,&lt;/span&gt;&lt;span class="RktVal"&gt;1&lt;/span&gt;&lt;span class="RktPn"&gt;]&lt;/span&gt;.&lt;/p&gt;
- &lt;div class="SCodeFlow"&gt;
-  &lt;table cellspacing="0" class="RktBlk"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;N&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;28&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;render-man&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;n&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;t&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._%2F%29%29"&gt;/&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._remainder%29%29"&gt;remainder&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;n&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;N&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;N&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/teachpack/2htdpimage.html#%28def._%28%28lib._2htdp%2Fimage..rkt%29._freeze%29%29"&gt;freeze&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29"&gt;running-stickman-icon&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;t&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:height&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;128&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:head-color&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"white"&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:arm-color&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"gray"&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;#:body-color&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;"lightblue"&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
- &lt;p&gt;Since the result of &lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/images/Icons.html#%28def._%28%28lib._images%2Ficons%2Fstickman..rkt%29._running-stickman-icon%29%29"&gt;running-stickman-icon&lt;/a&gt;&lt;/span&gt; is a &lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/draw/bitmap_.html"&gt;bitmap%&lt;/a&gt;&lt;/span&gt;
-object, we need to "&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/teachpack/2htdpimage.html#%28def._%28%28lib._2htdp%2Fimage..rkt%29._freeze%29%29"&gt;freeze&lt;/a&gt;&lt;/span&gt;" it in order to use it with &lt;span class="RktSym"&gt;2htdp/universe&lt;/span&gt;.&lt;/p&gt;
- &lt;p&gt;The running man is now ready for action:&lt;/p&gt;
- &lt;div class="SCodeFlow"&gt;
-  &lt;table cellspacing="0" class="RktBlk"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._require%29%29"&gt;require&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;images/icons/stickman&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;2htdp/image&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;2htdp/universe&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;N&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;28&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;render-man&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;n&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/stx-patterns.html#%28form._%28%28lib._racket%2Fprivate%2Fstxcase-scheme..rkt%29._......%29%29"&gt;...&lt;/a&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;animate&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;render-man&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
- &lt;p&gt;Those of you who tried the above in
-&lt;a href="http://docs.racket-lang.org/drracket/index.html?q=drracket"&gt;DrRacket&lt;/a&gt;
-are probably not too impressed.&lt;/p&gt;
- &lt;p&gt;Can you spot the problem?&lt;/p&gt;
- &lt;p&gt;The animation is slow and stutters. For each frame the ray tracer is activated
-to produce an image. Since &lt;span class="RktSym"&gt;animate&lt;/span&gt; shows 28 frames pr second, the
-function &lt;span class="RktSym"&gt;render-man&lt;/span&gt; is not allowed to use more than 1/28 second to
-generate each image - and for large heights the ray tracer is not fast enough.&lt;/p&gt;
- &lt;p&gt;The solution is to prerender the images of the running man before starting
-the animation. This way each image is generated only once.&lt;/p&gt;
- &lt;div class="SCodeFlow"&gt;
-  &lt;table cellspacing="0" class="RktBlk"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._require%29%29"&gt;require&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;images/icons/stickman&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;2htdp/image&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;2htdp/universe&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;N&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktVal"&gt;28&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;render-man&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;n&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/stx-patterns.html#%28form._%28%28lib._racket%2Fprivate%2Fstxcase-scheme..rkt%29._......%29%29"&gt;...&lt;/a&gt;&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;men&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%2Fvector%29%29"&gt;for/vector&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktPn"&gt;[&lt;/span&gt;&lt;span class="RktSym"&gt;n&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;N&lt;/span&gt;&lt;span class="RktPn"&gt;]&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;render-man&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;n&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29"&gt;define&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;man&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;n&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/vectors.html#%28def._%28%28quote._~23~25kernel%29._vector-ref%29%29"&gt;vector-ref&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;men&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._remainder%29%29"&gt;remainder&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;n&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;N&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;
-     &lt;td&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;animate&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;man&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
- &lt;p&gt;&lt;img src="/img/2013-06-21-running-man/running-man.gif" alt="" /&gt;&lt;/p&gt;&lt;/html&gt;</description></item></channel></rss>
+ &lt;p&gt;&lt;img src="/img/2013-06-27-drawing-a-bezier-curve/pict.png" alt="image" height="100" width="400" /&gt;&lt;/p&gt;&lt;/html&gt;</description></item></channel></rss>

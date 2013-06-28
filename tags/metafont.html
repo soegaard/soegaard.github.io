@@ -6,13 +6,13 @@
          could also use in other parts of this template if you
          wish. -->
     <meta charset="utf-8" />
-    <title>About page</title>
-    <meta name="description" content="About page: Everything Racket - a blog on everything Racket related. Jens Axel Søgaard ...">
+    <title>Posts tagged 'metafont'</title>
+    <meta name="description" content="Posts tagged 'metafont'">
     <meta name="author"      content="Jens Axel Søgaard">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="metafont">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://soegaard.github.io/About.html">
+    <link rel="canonical" href="http://soegaard.github.io/tags/metafont.html">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/cerulean/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/cerulean/bootstrap-responsive.min.css">
@@ -23,9 +23,9 @@
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <!-- Feeds -->
     <link ref="alternate" type="application/atom+xml"
-          href="/feeds/all.atom.xml" title="Atom Feed">
+          href="/feeds/metafont.atom.xml" title="Atom Feed">
     <link ref="alternate" type="application/rss+xml"
-          href="/feeds/all.rss.xml" title="RSS Feed">
+          href="/feeds/metafont.rss.xml" title="RSS Feed">
     <!-- JS -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
@@ -58,7 +58,7 @@
             <li>
               <a href="/index.html" class="brand">Everything Racket</a>
             </li> 
-            <li class="active">
+            <li>
               <a href="/About.html">About</a>
             </li> 
           </ul>
@@ -81,14 +81,79 @@
                `uri-path` being "/index.html" -->
 
           <!-- Index pages for posts have non-#f `tag` -->
-
+          <h1>Posts tagged <em>metafont</em></h1>
           <!-- The main page contents are in `contents` -->
 
-<h1 id="About page">About page</h1>
-
-<p>Everything Racket - a blog on everything Racket related.</p>
-
-<p>Jens Axel Søgaard</p>
+<article class="index-post">
+ <header>
+  <h2><a href="/blog/2013/06/21/summer-project-meta-font-post-in-racket/">Summer Project: Meta(font|post) in Racket</a></h2>
+  <p class="date-and-tags">
+   <time datetime="2013-06-21" pubdate="true">2013-06-21</time> :: <a href="/tags/graphics.html">graphics</a>, <a href="/tags/hobby.html">hobby</a>, <a href="/tags/metafont.html">metafont</a>, <a href="/tags/metapost.html">metapost</a>, <a href="/tags/tikz.html">tikz</a></p></header>
+ <div class="entry-content">
+  <p>The summer holiday is getting closer. This means there is time to focus on hacking.
+Last year my summer project was to
+implement a <a href="http://docs.racket-lang.org/math/matrices.html?q=matrix">matrix</a>
+library and a
+<a href="http://docs.racket-lang.org/math/number-theory.html?q=matrix">number theory</a>
+library.</p>
+  <p>This year I have decided to write a graphics library inspired by the approach taken by
+<a href="http://en.wikipedia.org/wiki/Metafont">Metafont</a>, <a href="http://en.wikipedia.org/wiki/MetaPost">Metapost</a>
+and <a href="http://www.texample.net/tikz/">Tikz</a>. The basic concept in these libraries is a <span style="font-style: italic">path</span>.
+The existing Racket library <span class="RktSym"><a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/pict/Pict_Datatype.html#%28def._%28%28lib._pict%2Fmain..rkt%29._pict%29%29">pict</a></span> on the other hand is based on <span style="font-style: italic">pictures</span>.</p>
+  <p>Bezier curves will be used to draw the paths. Drawing a Bezier curve is straight forward;
+the builtin graphics library, <span class="RktSym">racket/draw</span> has support for this
+in the form of
+<a href="http://docs.racket-lang.org/search/index.html?q=curve-to">curve-to</a>.</p>
+  <p>What is needed is convenient ways of <span style="font-style: italic">specifying</span> and <span style="font-style: italic">manipulating</span> paths.</p>
+  <p>The first problem will be this: Given points <span style="font-style: italic">P0</span>, <span style="font-style: italic">P3</span>, <span style="font-style: italic">P6</span>, ..., <span style="font-style: italic">Pn</span>.
+Draw a "pretty" curve through these points. That is, determine which Bezier curves
+is to be drawn between <span style="font-style: italic">P0</span> and <span style="font-style: italic">P3</span>, between <span style="font-style: italic">P3</span> and <span style="font-style: italic">P6</span> etc.</p>
+  <p><a href="http://ect.bell-labs.com/who/hobby/index.shtml">John D. Hobby</a> and <a href="http://www-cs-faculty.stanford.edu/~uno/">Donald Knuth</a> introduced
+the algorithm now known as "Hobby&rsquo;s Algorithm" in Metafont to solve this problem. It is
+the central algorithm of the library.</p>
+  <p>The second problem is to introduce syntax for specifying paths. There is no doubt that
+the popularity of MetaPost in TeX circles is the concise syntax - so I&rsquo;ll see how
+much it makes sense to steal.</p>
+  <p>The third problem is to support for specifying points based on linear equations. Luckily the
+grunt works is already done - the matrix library contains equation solvers.</p>
+  <p>Breaking large project into chunks help tremendously. Just witness
+how fast the number of completed Racket tasks went up on
+<a href="http://rosettacode.org/wiki/Category:Racket">RosettaCode</a>.</p>
+  <ol>
+   <li>
+    <p>Draw a Bezier curve using <span class="RktSym">racket/draw</span></p></li>
+   <li>
+    <p>Explain Hobby&rsquo;s algorithm</p></li>
+   <li>
+    <p>Implement Hobby&rsquo;s algorithm</p></li>
+   <li>
+    <p>Design syntax for paths</p></li>
+   <li>
+    <p>Implement syntax for paths</p></li>
+   <li>
+    <p>Document syntax for paths</p></li>
+   <li>
+    <p>Predefinitions for standard paths</p></li>
+   <li>
+    <p>Examples - inspration from the Metafontbook and Tikz</p></li>
+   <li>
+    <p>Linear expressions and "linear variables"</p></li>
+   <li>
+    <p>Syntax for linear expressions and linear variables.</p></li>
+   <li>
+    <p>From fonts to paths</p></li>
+   <li>
+    <p>Higher order path operations</p></li>
+   <li>
+    <p>Bounding boxes for paths</p></li>
+   <li>
+    <p>Intersections between curves</p></li>
+   <li>
+    <p>Coloration of areas</p></li>
+   <li>
+    <p>Bitmaps</p></li>
+   <li>
+    <p>Relation to picts?</p></li></ol></div></article>
         </div>
         <!-- Right column -->
         <div id="right-sidebar" class="span3">

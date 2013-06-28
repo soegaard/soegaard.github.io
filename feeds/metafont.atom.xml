@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Everything Racket: Posts tagged 'metafont'</title>
+ <link rel="self" href="http://soegaard.github.io/feeds/metafont.atom.xml" />
+ <link href="http://soegaard.github.io/tags/metafont.html" />
+ <id>urn:http-soegaard-github-io:-tags-metafont-html</id>
+ <updated>2013-06-21T12:38:51Z</updated>
+ <entry>
+  <title type="text">Summer Project: Meta(font|post) in Racket</title>
+  <link rel="alternate" href="http://soegaard.github.io/blog/2013/06/21/summer-project-meta-font-post-in-racket/?utm_source=metafont&amp;utm_medium=Atom" />
+  <id>urn:http-soegaard-github-io:-blog-2013-06-21-summer-project-meta-font-post-in-racket</id>
+  <published>2013-06-21T12:38:51Z</published>
+  <updated>2013-06-21T12:38:51Z</updated>
+  <author>
+   <name>Jens Axel Søgaard</name></author>
+  <content type="html">
+&lt;html&gt;&lt;img src="http://soegaard.github.io/img/1x1.gif?utm_source=metafont&amp;amp;utm_medium=Atom&amp;amp;utm_campaign=%2Fblog%2F2013%2F06%2F21%2Fsummer-project-meta-font-post-in-racket%2F" height="1" width="1" /&gt;
+ &lt;p&gt;The summer holiday is getting closer. This means there is time to focus on hacking.
+Last year my summer project was to
+implement a &lt;a href="http://docs.racket-lang.org/math/matrices.html?q=matrix"&gt;matrix&lt;/a&gt;
+library and a
+&lt;a href="http://docs.racket-lang.org/math/number-theory.html?q=matrix"&gt;number theory&lt;/a&gt;
+library.&lt;/p&gt;
+ &lt;p&gt;This year I have decided to write a graphics library inspired by the approach taken by
+&lt;a href="http://en.wikipedia.org/wiki/Metafont"&gt;Metafont&lt;/a&gt;, &lt;a href="http://en.wikipedia.org/wiki/MetaPost"&gt;Metapost&lt;/a&gt;
+and &lt;a href="http://www.texample.net/tikz/"&gt;Tikz&lt;/a&gt;. The basic concept in these libraries is a &lt;span style="font-style: italic"&gt;path&lt;/span&gt;.
+The existing Racket library &lt;span class="RktSym"&gt;&lt;a class="RktValLink" data-pltdoc="x" href="http://docs.racket-lang.org/pict/Pict_Datatype.html#%28def._%28%28lib._pict%2Fmain..rkt%29._pict%29%29"&gt;pict&lt;/a&gt;&lt;/span&gt; on the other hand is based on &lt;span style="font-style: italic"&gt;pictures&lt;/span&gt;.&lt;/p&gt;
+ &lt;p&gt;Bezier curves will be used to draw the paths. Drawing a Bezier curve is straight forward;
+the builtin graphics library, &lt;span class="RktSym"&gt;racket/draw&lt;/span&gt; has support for this
+in the form of
+&lt;a href="http://docs.racket-lang.org/search/index.html?q=curve-to"&gt;curve-to&lt;/a&gt;.&lt;/p&gt;
+ &lt;p&gt;What is needed is convenient ways of &lt;span style="font-style: italic"&gt;specifying&lt;/span&gt; and &lt;span style="font-style: italic"&gt;manipulating&lt;/span&gt; paths.&lt;/p&gt;
+ &lt;p&gt;The first problem will be this: Given points &lt;span style="font-style: italic"&gt;P0&lt;/span&gt;, &lt;span style="font-style: italic"&gt;P3&lt;/span&gt;, &lt;span style="font-style: italic"&gt;P6&lt;/span&gt;, ..., &lt;span style="font-style: italic"&gt;Pn&lt;/span&gt;.
+Draw a "pretty" curve through these points. That is, determine which Bezier curves
+is to be drawn between &lt;span style="font-style: italic"&gt;P0&lt;/span&gt; and &lt;span style="font-style: italic"&gt;P3&lt;/span&gt;, between &lt;span style="font-style: italic"&gt;P3&lt;/span&gt; and &lt;span style="font-style: italic"&gt;P6&lt;/span&gt; etc.&lt;/p&gt;
+ &lt;p&gt;&lt;a href="http://ect.bell-labs.com/who/hobby/index.shtml"&gt;John D. Hobby&lt;/a&gt; and &lt;a href="http://www-cs-faculty.stanford.edu/~uno/"&gt;Donald Knuth&lt;/a&gt; introduced
+the algorithm now known as "Hobby&amp;rsquo;s Algorithm" in Metafont to solve this problem. It is
+the central algorithm of the library.&lt;/p&gt;
+ &lt;p&gt;The second problem is to introduce syntax for specifying paths. There is no doubt that
+the popularity of MetaPost in TeX circles is the concise syntax - so I&amp;rsquo;ll see how
+much it makes sense to steal.&lt;/p&gt;
+ &lt;p&gt;The third problem is to support for specifying points based on linear equations. Luckily the
+grunt works is already done - the matrix library contains equation solvers.&lt;/p&gt;
+ &lt;p&gt;Breaking large project into chunks help tremendously. Just witness
+how fast the number of completed Racket tasks went up on
+&lt;a href="http://rosettacode.org/wiki/Category:Racket"&gt;RosettaCode&lt;/a&gt;.&lt;/p&gt;
+ &lt;ol&gt;
+  &lt;li&gt;
+   &lt;p&gt;Draw a Bezier curve using &lt;span class="RktSym"&gt;racket/draw&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Explain Hobby&amp;rsquo;s algorithm&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Implement Hobby&amp;rsquo;s algorithm&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Design syntax for paths&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Implement syntax for paths&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Document syntax for paths&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Predefinitions for standard paths&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Examples - inspration from the Metafontbook and Tikz&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Linear expressions and "linear variables"&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Syntax for linear expressions and linear variables.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;From fonts to paths&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Higher order path operations&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Bounding boxes for paths&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Intersections between curves&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Coloration of areas&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Bitmaps&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+   &lt;p&gt;Relation to picts?&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/html&gt;</content></entry></feed>

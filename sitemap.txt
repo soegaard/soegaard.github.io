@@ -1,2 +1,4 @@
+http://soegaard.github.io/blog/2013/06/27/drawing-bezier-curves/
+http://soegaard.github.io/blog/2013/06/21/summer-project-meta-font-post-in-racket/
 http://soegaard.github.io/blog/2013/06/21/running-man/
 http://soegaard.github.io/About.html
