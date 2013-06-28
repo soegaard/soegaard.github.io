@@ -30,7 +30,7 @@ to draw Bezier curves.&lt;/p&gt;
   &lt;div class="SCodeFlow"&gt;
    &lt;p&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;&lt;a class="RktStxLink" data-pltdoc="x" href="http://docs.racket-lang.org/reference/define-struct.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._struct%29%29"&gt;struct&lt;/a&gt;&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;bez&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktPn"&gt;(&lt;/span&gt;&lt;span class="RktSym"&gt;p0&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;p1&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;p2&lt;/span&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;span class="RktSym"&gt;p3&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;span class="RktPn"&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
  &lt;div class="SIntrapara"&gt;The curve leaves &lt;span class="RktSym"&gt;p0&lt;/span&gt; in the direction towards &lt;span class="RktSym"&gt;p1&lt;/span&gt;.
-The curve approaces &lt;span class="RktSym"&gt;p3&lt;/span&gt; in the direction from &lt;span class="RktSym"&gt;p2&lt;/span&gt;.&lt;/div&gt;
+The curve approaches &lt;span class="RktSym"&gt;p3&lt;/span&gt; in the direction from &lt;span class="RktSym"&gt;p2&lt;/span&gt;.&lt;/div&gt;
  &lt;p&gt;Given these structure definitions we can now represent Picasso&amp;rsquo;s Dachshund
 (see &lt;a href="http://jeremykun.com/2013/05/11/bezier-curves-and-picasso/"&gt;Jeremy Kun&amp;rsquo;s Blog&lt;/a&gt;).&lt;/p&gt;
  &lt;p&gt;&lt;/p&gt;

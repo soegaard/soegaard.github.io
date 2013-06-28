@@ -14,7 +14,7 @@ A Bezier curve from @racket[p0] to @racket[p3] with control points
 
 @chunk[<bez-definition> (struct bez (p0 p1 p2 p3))]
 The curve leaves @racket[p0] in the direction towards @racket[p1].
-The curve approaces @racket[p3] in the direction from @racket[p2].
+The curve approaches @racket[p3] in the direction from @racket[p2].
 
 Given these structure definitions we can now represent Picasso's Dachshund
 (see @hyperlink["http://jeremykun.com/2013/05/11/bezier-curves-and-picasso/"]{Jeremy Kun's Blog}).
