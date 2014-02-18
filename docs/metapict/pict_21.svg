@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100pt" height="50pt" viewBox="0 0 100 50" version="1.1">
-<g id="surface111">
-<path style="fill-rule:evenodd;fill:rgb(100%,0%,16.470588%);fill-opacity:1;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%,0%,16.470588%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0 50 C 16.667969 50 33.332031 50 50 50 C 50 33.332031 50 16.667969 50 0 C 33.332031 0 16.667969 0 0 0 C 0 16.667969 0 33.332031 0 50 "/>
-<path style="fill-rule:evenodd;fill:rgb(62.745098%,12.54902%,94.117647%);fill-opacity:1;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(62.745098%,12.54902%,94.117647%);stroke-opacity:1;stroke-miterlimit:10;" d="M 50 50 C 66.667969 50 83.332031 50 100 50 C 100 33.332031 100 16.667969 100 0 C 83.332031 0 66.667969 0 50 0 C 50 16.667969 50 33.332031 50 50 "/>
+<g id="surface113">
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(100%,0%,16.470588%);fill-opacity:1;" d="M 0 50 C 16.667969 50 33.332031 50 50 50 C 50 33.332031 50 16.667969 50 0 C 33.332031 0 16.667969 0 0 0 C 0 16.667969 0 33.332031 0 50 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(62.745098%,12.54902%,94.117647%);fill-opacity:1;" d="M 50 50 C 66.667969 50 83.332031 50 100 50 C 100 33.332031 100 16.667969 100 0 C 83.332031 0 66.667969 0 50 0 C 50 16.667969 50 33.332031 50 50 "/>
 </g>
 </svg>
