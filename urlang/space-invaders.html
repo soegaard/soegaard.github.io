@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> <meta charset="utf-8">
+         <title>Space Invaders</title>
+ </head>
+ <body>
+    <h1>Space Invaders in Urlang</h1>
+    <p>Use <tt>left</tt> or <tt>right</tt> to move</p>
+    <p>Use <tt>space</tt> to shoot.</p>
+    <p>Use <tt>r</tt> to restart</p>
+    <p>See source code on Github:
+       <a href=
+  "https://github.com/soegaard/urlang/blob/master/urlang-examples/space-invaders/space-invaders.rkt">
+       space-invaders.rkt</a>
+    <p><canvas id="the-canvas" width="350" height="400" tabindex="1"/></p>
+    <script>"use strict";
+
+function remainder(x, y) {
+    return (x % y);
+};
+
+function filter(pred, xs) {
+    var j = 0,
+        ys = []; {
+        var a = xs,
+            n = a.length,
+            i = 0;
+        while ((true && true && (i < n))) {
+            ((function(x) {
+                (((pred(x)) === false) ? undefined : ((function() {
+                    (ys[j] = x);
+                    return (j = (j + 1));
+                })()));
+                return (i += 1);
+            })(a[i]));
+        };
+        undefined;
+    }
+    return ys;
+};
+
+function filter_map(proc, xs) {
+    var j = 0,
+        ys = [],
+        t = false; {
+        var a = xs,
+            n = a.length,
+            i = 0;
+        while ((true && true && (i < n))) {
+            ((function(x) {
+                (t = (proc(x)));
+                ((t === false) ? undefined : ((function() {
+                    (ys[j] = t);
+                    return (j = (j + 1));
+                })()));
+                return (i += 1);
+            })(a[i]));
+        };
+        undefined;
+    }
+    return ys;
+};
+
+function append(xs, ys) {
+    var zs = [],
+        j = 0; {
+        var a = xs,
+            n = a.length,
+            i = 0;
+        while ((true && true && (i < n))) {
+            ((function(x) {
+                (zs[j] = x);
+                (j = (j + 1));
+                return (i += 1);
+            })(a[i]));
+        };
+        undefined;
+    } {
+        var a_2 = ys,
+            n_1 = a_2.length,
+            i_3 = 0;
+        while ((true && true && (i_3 < n_1))) {
+            ((function(y) {
+                (zs[j] = y);
+                (j = (j + 1));
+                return (i_3 += 1);
+            })(a_2[i_3]));
+        };
+        undefined;
+    }
+    return zs;
+};
+
+function map(f, xs) {
+    return ((function(a) {
+        {
+            var a_4 = xs,
+                n = a_4.length,
+                i = 0;
+            while ((true && true && (i < n))) {
+                ((function(x) {
+                    ((a.push)((f(x))));
+                    return (i += 1);
+                })(a_4[i]));
+            };
+            undefined;
+        }
+        return a;
+    })([]));
+};
+
+function WORLD(player_5, invaders, bullets) {
+    (this["player"] = player_5);
+    (this["invaders"] = invaders);
+    (this["bullets"] = bullets);
+    return this;
+};
+
+function world(player_6, invaders, bullets) {
+    return new WORLD(player_6, invaders, bullets);
+};
+
+function world_player(x) {
+    return x.player;
+};
+
+function world_invaders(x) {
+    return x.invaders;
+};
+
+function world_bullets(x) {
+    return x.bullets;
+};
+
+function world_p(o) {
+    return (o.constructor === WORLD);
+};
+
+function BODY(x, y, size) {
+    (this["x"] = x);
+    (this["y"] = y);
+    (this["size"] = size);
+    return this;
+};
+
+function body(x, y, size) {
+    return new BODY(x, y, size);
+};
+
+function body_x(x) {
+    return x.x;
+};
+
+function body_y(x) {
+    return x.y;
+};
+
+function body_size(x) {
+    return x.size;
+};
+
+function body_p(o) {
+    return (o.constructor === BODY);
+};
+
+function INVADER(x, y, size, patrol_x, speed_x) {
+    (this["x"] = x);
+    (this["y"] = y);
+    (this["size"] = size);
+    (this["patrol_x"] = patrol_x);
+    (this["speed_x"] = speed_x);
+    return this;
+};
+
+function invader(x, y, size, patrol_x, speed_x) {
+    return new INVADER(x, y, size, patrol_x, speed_x);
+};
+
+function invader_x(x) {
+    return x.x;
+};
+
+function invader_y(x) {
+    return x.y;
+};
+
+function invader_size(x) {
+    return x.size;
+};
+
+function invader_patrol_x(x) {
+    return x["patrol_x"];
+};
+
+function invader_speed_x(x) {
+    return x["speed_x"];
+};
+
+function invader_p(o) {
+    return (o.constructor === INVADER);
+};
+
+function BULLET(x, y, size, velocity_x, velocity_y) {
+    (this["x"] = x);
+    (this["y"] = y);
+    (this["size"] = size);
+    (this["velocity_x"] = velocity_x);
+    (this["velocity_y"] = velocity_y);
+    return this;
+};
+
+function bullet(x, y, size, velocity_x, velocity_y) {
+    return new BULLET(x, y, size, velocity_x, velocity_y);
+};
+
+function bullet_x(x) {
+    return x.x;
+};
+
+function bullet_y(x) {
+    return x.y;
+};
+
+function bullet_size(x) {
+    return x.size;
+};
+
+function bullet_velocity_x(x) {
+    return x["velocity_x"];
+};
+
+function bullet_velocity_y(x) {
+    return x["velocity_y"];
+};
+
+function bullet_p(o) {
+    return (o.constructor === BULLET);
+};
+
+function PLAYER(x, y, size, dead_p) {
+    (this["x"] = x);
+    (this["y"] = y);
+    (this["size"] = size);
+    (this["dead_p"] = dead_p);
+    return this;
+};
+
+function player(x, y, size, dead_p) {
+    return new PLAYER(x, y, size, dead_p);
+};
+
+function player_x(x) {
+    return x.x;
+};
+
+function player_y(x) {
+    return x.y;
+};
+
+function player_size(x) {
+    return x.size;
+};
+
+function player_dead_p(x) {
+    return x["dead_p"];
+};
+
+function player_p(o) {
+    return (o.constructor === PLAYER);
+};
+var width = 350;
+var height = 400;
+var the_player_size = 15;
+var the_bullet_size = 3;
+var the_invader_size = 15;
+
+function new_bullet(x, y, vx, vy) {
+    return (bullet(x, y, the_bullet_size, vx, vy));
+};
+
+function new_invader(x, y) {
+    var patrol_x = 0,
+        speed_x = 0.3;
+    return (invader(x, y, the_invader_size, patrol_x, speed_x));
+};
+
+function new_player(x, y) {
+    var size = 15,
+        dead_p = false;
+    return (player(x, y, size, dead_p));
+};
+
+function create_world() {
+    return (world((create_player()), (create_invaders()), []));
+};
+
+function create_invaders() {
+    return ((function(a) {
+        {
+            var i = 0,
+                t = 24;
+            while ((true && true && (i < t))) {
+                ((function(j) {
+                    var x = (30 + (30 * (remainder(j, 8))));
+                    var y = (30 + (30 * (remainder(j, 3))));
+                    ((a.push)((new_invader(x, y))));
+                    return (i += 1);
+                })(i));
+            };
+            undefined;
+        }
+        return a;
+    })([]));
+};
+
+function create_player() {
+    var x = (width / 2.0),
+        y = (height - (2.0 * the_player_size));
+    return (new_player(x, y));
+};
+
+function update_invader(i) {
+    var tmp = i,
+        x = tmp.x,
+        y = tmp.y,
+        size = tmp.size,
+        patrol_x = tmp["patrol_x"],
+        speed_x = tmp["speed_x"];
+    var speed_x_factor = ((((0 <= patrol_x) && (patrol_x <= 29)) === false) ? -1 : 1);
+    var new_speed_x = (speed_x_factor * speed_x);
+    var new_x = (x + new_speed_x);
+    var new_patrol_x = (patrol_x + new_speed_x);
+    return (invader(new_x, y, size, new_patrol_x, new_speed_x));
+};
+
+function update_bullet(b) {
+    var tmp = b,
+        x = tmp.x,
+        y = tmp.y,
+        size = tmp.size,
+        vx = tmp["velocity_x"],
+        vy = tmp["velocity_y"];
+    return (bullet((x + vx), (y + vy), size, vx, vy));
+};
+
+function update_player(w) {
+    var tmp = w,
+        p = tmp.player,
+        is = tmp.invaders,
+        bs = tmp.bullets;
+    var tmp_7 = p,
+        x = tmp_7.x,
+        y = tmp_7.y,
+        size = tmp_7.size,
+        d = tmp_7["dead_p"];
+    var dead_p = (d || (collisions_p(p, bs)));
+    var moved_player = ((d === false) ? (((key_down_p("left")) === false) ? (((key_down_p("right")) === false) ? ((function() {
+        return (player(x, y, size, dead_p));
+    })()) : ((function() {
+        return (player((x + 2.0), y, size, dead_p));
+    })())) : ((function() {
+        return (player((x - 2.0), y, size, dead_p));
+    })())) : ((function() {
+        return p;
+    })()));
+    return (world(moved_player, is, bs));
+};
+
+function spawn_invader_bullets(w) {
+    var tmp = w,
+        p = tmp.player,
+        is = tmp.invaders,
+        bs = tmp.bullets;
+    var harder = ((24 - is.length) / 1000);
+    var maybe_spawn_bullet = (function(i) {
+        var tmp_8 = i,
+            x = tmp_8.x,
+            y = tmp_8.y,
+            size = tmp_8.size,
+            _ = tmp_8["patrol_x"],
+            _ = tmp_8["speed_x"];
+        return ((((((Math.random)()) > (0.995 - harder)) && (!(invader_below_p(i, is)))) === false) ? false : (bullet(x, (y + size + 1), 3, (((Math.random)()) - 0.5), 2.0)));
+    });
+    var new_bullets = (filter_map(maybe_spawn_bullet, is));
+    return (world(p, is, (append(new_bullets, bs))));
+};
+
+function invader_below_p(i, is) {
+    var tmp = i,
+        x = tmp.x,
+        y = tmp.y,
+        size = tmp.size;
+    return ((function(b) {
+        {
+            var a = is,
+                n = a.length,
+                i_9 = 0,
+                cont = true;
+            while ((true && cont && (i_9 < n))) {
+                ((function(b_10) {
+                    skip: while (true) {
+                        (b = (b || ((x <= b_10.x <= (x + size)) && (b_10.y > (y + size)))));
+                        if (!(b === false)) {
+                            (cont = false);
+                            break skip;
+                        } else;;
+                        (i_9 += 1);
+                        break skip;
+                    };;
+                    return undefined;
+                })(a[i_9]));
+            };
+            undefined;
+        }
+        return b;
+    })(false));
+};
+
+function spawn_player_bullet(w) {
+    var tmp = w,
+        p = tmp.player,
+        is = tmp.invaders,
+        bs = tmp.bullets;
+    return (((player_dead_p(p)) === false) ? (((key_just_down_p("space")) === false) ? ((function() {
+        return w;
+    })()) : ((function() {
+        var tmp_11 = p,
+            x = tmp_11.x,
+            y = tmp_11.y,
+            size = tmp_11.size,
+            d = tmp_11["dead_p"];
+        var b = (new_bullet((x + (size / 2.0)), y, 0, -7));
+        ((bs.push)(b));
+        return (world(p, is, bs));
+    })())) : ((function() {
+        return w;
+    })()));
+};
+
+function update(w) {
+    return (restart_on_r((remove_colliding_bodies((spawn_player_bullet((spawn_invader_bullets((update_player((update_invaders((update_bullets(w))))))))))))));
+};
+
+function update_invaders(w) {
+    var is = (world_invaders(w));
+    return ((function() {
+        var copy = ((Object.create)(w));
+        (copy["invaders"] = (map(update_invader, is)));
+        return copy;
+    })());
+};
+
+function update_bullets(w) {
+    return ((function() {
+        var copy = ((Object.create)(w));
+        (copy["bullets"] = (map(update_bullet, (world_bullets(w)))));
+        return copy;
+    })());
+};
+
+function restart_on_r(w) {
+    return (((key_down_p("r")) === false) ? w : (create_world()));
+};
+
+function colliding_p(b1, b2) {
+    var tmp = b1,
+        x1 = tmp.x,
+        y1 = tmp.y,
+        s1 = tmp.size;
+    var tmp_12 = b2,
+        x2 = tmp_12.x,
+        y2 = tmp_12.y,
+        s2 = tmp_12.size;
+    return (!((b1 === b2) || ((x1 + s1) < x2) || (x1 > (x2 + s2)) || ((y1 + s1) < y2) || (y1 > (y2 + s2))));
+};
+
+function collisions_p(x, bs) {
+    return ((function(b) {
+        {
+            var a = bs,
+                n = a.length,
+                i = 0,
+                cont = true;
+            while ((true && cont && (i < n))) {
+                ((function(b_13) {
+                    skip: while (true) {
+                        (b = (b || (colliding_p(x, b_13))));
+                        if (!(b === false)) {
+                            (cont = false);
+                            break skip;
+                        } else;;
+                        (i += 1);
+                        break skip;
+                    };;
+                    return undefined;
+                })(a[i]));
+            };
+            undefined;
+        }
+        return b;
+    })(false));
+};
+
+function inside_screen_p(b) {
+    var tmp = b,
+        x = tmp.x,
+        y = tmp.y,
+        size = tmp.size;
+    return ((-40 < x < (width + 40)) && (-40 < y < (height + 40)));
+};
+
+function remove_colliding_bodies(w) {
+    var tmp = w,
+        p = tmp.player,
+        is = tmp.invaders,
+        bs = tmp.bullets;
+    var no_bullet_collisons_p = (function(x) {
+            return (!(collisions_p(x, bs)));
+        }),
+        no_invader_collisons_p = (function(x) {
+            return (!(collisions_p(x, is)));
+        });
+    return (world(p, (filter(no_bullet_collisons_p, is)), (filter(inside_screen_p, (filter(no_invader_collisons_p, bs))))));
+};
+
+function draw_bodies(bs, dc) {
+    return ((function() {
+        var a = bs,
+            n = a.length,
+            i = 0;
+        while ((true && true && (i < n))) {
+            ((function(b) {
+                (((!(b === undefined)) === false) ? undefined : ((function() {
+                    var tmp = b,
+                        x = tmp.x,
+                        y = tmp.y,
+                        s = tmp.size;
+                    var c = ((((player_p(b)) && (player_dead_p(b))) === false) ? (((player_p(b)) === false) ? (((invader_p(b)) === false) ? ((function() {
+                        return "black";
+                    })()) : ((function() {
+                        return "red";
+                    })())) : ((function() {
+                        return "blue";
+                    })())) : ((function() {
+                        return "purple";
+                    })()));
+                    (dc["fillStyle"] = c);
+                    return (fill_rect(dc, x, y, s, s));
+                })()));
+                return (i += 1);
+            })(a[i]));
+        };
+        undefined;
+        return undefined;
+    })());
+};
+
+function fill_rect(dc, x, y, w, h) {
+    return ((dc["fillRect"])((x + 0.5), (y + 0.5), w, h));
+};
+
+function clear_all(dc) {
+    (dc["fillStyle"] = "white");
+    return (fill_rect(dc, 0, 0, width, height));
+};
+
+function draw_world(w, dc) {
+    var tmp = w,
+        p = tmp.player,
+        is = tmp.invaders,
+        bs = tmp.bullets;
+    (clear_all(dc));
+    return (draw_bodies((append([p], (append(is, bs)))), dc));
+};
+var the_world = (create_world());
+var the_keyboard = [];
+
+function key_up_e(k) {
+    return (the_keyboard[k] = false);
+};
+
+function key_down_p(k) {
+    return (!(key_up_p(k)));
+};
+
+function key_up_p(k) {
+    var state = the_keyboard[k];
+    return ((state === false) || (state === undefined));
+};
+
+function key_down_e(k) {
+    return (((key_up_p(k)) === false) ? undefined : ((function() {
+        return (the_keyboard[k] = ((Date.now)()));
+    })()));
+};
+
+function key_just_down_p(k) {
+    var old_ts = the_keyboard[k];
+    var new_ts = ((Date.now)());
+    return ((key_down_p(k)) && ((new_ts - old_ts) < 20));
+};
+
+function on_keydown(event) {
+    return (key_down_e((keycode__gkey(event["keyCode"]))));
+};
+
+function on_keyup(event) {
+    return (key_up_e((keycode__gkey(event["keyCode"]))));
+};
+
+function keycode__gkey(k) {
+    return (((k === 38) === false) ? (((k === 40) === false) ? (((k === 37) === false) ? (((k === 39) === false) ? (((k === 32) === false) ? (((k === 65) === false) ? (((k === 83) === false) ? (((k === 87) === false) ? (((k === 68) === false) ? (((k === 82) === false) ? ((function() {
+        return false;
+    })()) : ((function() {
+        return "r";
+    })())) : ((function() {
+        return "right";
+    })())) : ((function() {
+        return "up";
+    })())) : ((function() {
+        return "down";
+    })())) : ((function() {
+        return "left";
+    })())) : ((function() {
+        return "space";
+    })())) : ((function() {
+        return "right";
+    })())) : ((function() {
+        return "left";
+    })())) : ((function() {
+        return "down";
+    })())) : ((function() {
+        return "up";
+    })()));
+};
+var the_canvas = ((document["getElementById"])("the-canvas"));
+var the_drawing_context = ((the_canvas["getContext"])("2d"));
+console.log(((the_canvas["addEventListener"])("keydown", on_keydown)));
+console.log(((the_canvas["addEventListener"])("keyup", on_keyup)));
+
+function on_timer() {
+    (the_world = (update(the_world)));
+    return (draw_world(the_world, the_drawing_context));
+};
+var interval_id = ((window["setInterval"])(on_timer, 20));
+console.log(((the_canvas.focus)()));</script>
+</body>
+</html>
