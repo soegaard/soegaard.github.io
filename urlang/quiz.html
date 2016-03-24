@@ -53,9 +53,9 @@ var $question_container = ($("#flash-card-question-container"));
 var question_container = $question_container[0];
 
 function on_next_question() {
-    ((console.log)("Next!"));
     (current_card = ((current_card + 1) % the_cards.length));
-    return (render_flash_card(current_card));
+    (render_flash_card(current_card));
+    return (($answer_input.css)("background-color", "white"));
 };
 
 function on_answer_input_enter(e) {
