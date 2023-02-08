@@ -1205,3 +1205,12 @@ blockquote > blockquote.SVInsetFlow {
   line-height: 0.6rem;
 }
 
+.paragraph.framed { padding: 0.5rem;
+                    border: 1px solid black;
+                    margin-left:  3rem;
+                    width:  27rem;
+                    display: block;
+
+}
+.paragraph.framed > blockquote.SCodeFlow { padding: 1rem;
+}
