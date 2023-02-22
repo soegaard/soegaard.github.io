@@ -1,0 +1,1353 @@
+@charset "UTF-8";
+
+@media all {html {font-size: 18px;}}
+@media all and (max-width:1000px){html {font-size: 18px;}}
+@media all and (max-width:990.0px){html {font-size: 17.75px;}}
+@media all and (max-width:980.0px){html {font-size: 17.5px;}}
+@media all and (max-width:970.0px){html {font-size: 17.25px;}}
+@media all and (max-width:960.0px){html {font-size: 17.0px;}}
+@media all and (max-width:950.0px){html {font-size: 16.75px;}}
+@media all and (max-width:940.0px){html {font-size: 16.5px;}}
+@media all and (max-width:930.0px){html {font-size: 16.25px;}}
+@media all and (max-width:920.0px){html {font-size: 16.0px;}}
+@media all and (max-width:910.0px){html {font-size: 15.75px;}}
+@media all and (max-width:900.0px){html {font-size: 15.5px;}}
+@media all and (max-width:890.0px){html {font-size: 15.25px;}}
+@media all and (max-width:880.0px){html {font-size: 15.0px;}}
+@media all and (max-width:870.0px){html {font-size: 14.75px;}}
+@media all and (max-width:860.0px){html {font-size: 14.5px;}}
+@media all and (max-width:850.0px){html {font-size: 14.25px;}}
+@media all and (max-width:840.0px){html {font-size: 14.0px;}}
+@media all and (max-width:830.0px){html {font-size: 13.75px;}}
+@media all and (max-width:820.0px){html {font-size: 13.5px;}}
+@media all and (max-width:810.0px){html {font-size: 13.25px;}}
+@media all and (max-width:800.0px){html {font-size: 13.0px;}}
+@media all and (max-width:790.0px){html {font-size: 12.75px;}}
+@media all and (max-width:780.0px){html {font-size: 12.5px;}}
+@media all and (max-width:770.0px){html {font-size: 12.25px;}}
+@media all and (max-width:760.0px){html {font-size: 12.0px;}}
+@media all and (max-width:750.0px){html {font-size: 11.75px;}}
+@media all and (max-width:740.0px){html {font-size: 11.5px;}}
+@media all and (max-width:730.0px){html {font-size: 11.25px;}}
+@media all and (max-width:720.0px){html {font-size: 11.0px;}}
+@media all and (max-width:710.0px){html {font-size: 10.75px;}}
+@media all and (max-width:700.0px){html {font-size: 10.5px;}}
+
+
+
+@page {
+  size: A4;
+}
+
+
+*:not(input) {
+  padding:         0;
+  margin:          0;
+  border:          0;
+  font-weight:     inherit;
+  font-style:      inherit;
+  font-size:       inherit;
+  text-decoration: inherit;
+  color:           inherit;
+ }
+
+
+
+#doc {
+/* width: 87.5%; */
+/*  margin-left: auto;   */
+/*  padding-left: 12.5%; */
+
+ margin-left: 12.5vw;
+ margin-right: auto;
+ max-width: 1400px;
+}
+
+#doc.multi {
+ margin-left: 2rem;
+}
+
+
+
+/* ipad size:       768x1024 */
+/* ipad pro size:  1024x1366 */
+
+
+@media only screen and (max-width: 768px) {
+body {
+  width:        100%;
+  margin-left:  0%;
+}}
+
+@media only screen and (max-width: 1024px) {
+body {
+  width:       100%;
+  margin-left: 0.0%;
+}}
+
+
+
+
+
+#doc {
+    /* border: 1px solid black; */
+    margin-top:    6rem;
+    margin-bottom: 6rem;
+    margin-left:   12.5vw;
+
+    text-rendering: optimizeLegibility;
+font-feature-settings: 'kern' 1;
+
+    font-family: "Crimson Pro", serif;
+    color: #222;
+    line-height: 1.4;
+}
+
+#doc.multi {
+  margin-top: 2rem;
+   margin-bottom: 0rem;
+}
+
+     span.math {
+    text-align: left !important;
+}
+
+
+span.div.MathJax_Display {
+  margin-top: 0rem!important ;
+  background-color: red;
+}
+
+
+
+div.book {
+     margin-left: 0rem;
+    font-feature-settings: 'ss04' 1;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height:   1.1;
+    font-size:     3.00rem;
+margin-top:    0.25rem;
+    margin-bottom: 1.50rem;
+}
+
+div.part {
+     margin-left: 0rem;
+    font-feature-settings: 'ss04' 1;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height:   1.1;
+    font-size:     2.00rem;
+    width:        24.00rem;
+    margin-top:    0.25rem;
+    margin-bottom: 1.50rem;
+    clear:         left;
+}
+
+div.chapter, div.index {
+     margin-left: 0rem;
+    font-feature-settings: 'ss04' 1;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height:   1.1;
+    font-size:     2.00rem;
+    /* width:        24.00rem; */
+    margin-top:    0.25rem;
+    margin-bottom: 1.50rem;
+    clear:         both;
+}
+
+/* toc_header sames as div.chapter except for no block metrics */
+div.toc_header {
+    font-feature-settings: 'ss04' 1;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height:   1.1;
+    font-size:     2.00rem;
+    width:        24.00rem;
+    margin-top:    0.25rem;
+    margin-bottom: 1.50rem;
+    clear:         both;
+}
+
+/* lof_header sames as div.chapter except for no block metrics */
+div.lof_header {
+    font-feature-settings: 'ss04' 1;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height:   1.1;
+    font-size:     2.00rem;
+    width:        24.00rem;
+    margin-top:    0.25rem;
+    margin-bottom: 1.50rem;
+    clear:         both;
+}
+
+
+div.section {
+   margin-left: 0rem;
+  font-feature-settings: 'ss04' 1, 'c2sc' 1;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size:      1.5rem;
+  line-height:    1.2;
+  padding-top:    0.7rem;
+  padding-bottom: 0.3rem;
+  clear: both;
+}
+
+div.subsection {
+
+    width:     34.5rem;
+    margin-left: 0rem;
+  font-feature-settings: 'ss04' 1, 'c2sc' 1;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size:      1.2rem;
+  line-height:    1.2;
+  padding-top:    0.7rem;
+  padding-bottom: 0.3rem;
+  clear: both;
+}
+
+div.endsubsection {
+/* note: the top margin is negative to remove margin from
+         previous element */
+
+    width:     34.5rem;
+    margin-left: 0rem;
+  font-feature-settings: 'ss04' 1, 'c2sc' 1;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size:      1.2rem;
+  line-height:    1.2;
+  padding-top:    0.0rem;
+  padding-bottom: 0.0rem;
+  margin-top:    -0.6rem;
+  margin-bottom:  0.3rem;
+  clear: both;
+}
+
+
+div.paragraph {
+  /* border: 1px solid red; */
+
+    width:     34.5rem;
+    margin-left: 0rem;
+  padding-right: 20.5rem;
+  max-width:     34.5rem;  /* 38 -> 34.5 */
+
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+blockquote {
+  font-size:      0.8rem;
+  line-height:    1.0rem; /* needs to be sligthly larger than font-size */
+  padding-left:   3rem;
+  padding-right:  2rem;
+  padding-top:    0.1rem;
+  padding-bottom: 0.1rem;
+
+}
+
+pre {
+
+    width:     34.5rem;
+    margin-left: 0rem;
+   font-family: monospace;
+   font-size:     0.9rem;
+   margin-bottom: 0.8rem;
+}
+
+div.verbatim {
+
+    width:     34.5rem;
+    margin-left: 0rem;
+   font-size:     0.9rem;
+   margin-bottom: 0.8rem;
+}
+
+
+
+div.itemization {
+  margin-left:   2.0rem;
+  }
+
+dl.itemization {
+  display: grid;
+  grid-template-columns: max-content auto;
+  }
+dt.item {
+  grid-column-start: 1;
+  margin-right: 0.5rem;
+}
+dd.item {
+  grid-column-start: 2;
+}
+
+
+input.tab-head                   { display: none }
+input.tab-head ~ .tab            { display: none }
+input.tab-head + label.tab-head  { display: inline-block }
+
+/* the tab id must be unique on the *page* (sigh) */
+
+#tab0:checked   ~ .tab.content0,
+#tab1:checked   ~ .tab.content1,
+#tab2:checked   ~ .tab.content2,
+#tab3:checked   ~ .tab.content3,
+#tab4:checked   ~ .tab.content4,
+#tab5:checked   ~ .tab.content5,
+#tab6:checked   ~ .tab.content6,
+#tab7:checked   ~ .tab.content7,
+#tab8:checked   ~ .tab.content8,
+#tab9:checked   ~ .tab.content9,
+#tab10:checked  ~ .tab.content10,
+#tab11:checked  ~ .tab.content11,
+#tab12:checked  ~ .tab.content12,
+#tab13:checked  ~ .tab.content13,
+#tab14:checked  ~ .tab.content14,
+#tab15:checked  ~ .tab.content15,
+#tab16:checked  ~ .tab.content16,
+#tab17:checked  ~ .tab.content17,
+#tab18:checked  ~ .tab.content18,
+#tab19:checked  ~ .tab.content19,
+#tab20:checked  ~ .tab.content20,
+#tab21:checked  ~ .tab.content21,
+#tab22:checked  ~ .tab.content22,
+#tab23:checked  ~ .tab.content23,
+#tab24:checked  ~ .tab.content24,
+#tab25:checked  ~ .tab.content25,
+#tab26:checked  ~ .tab.content26,
+#tab27:checked  ~ .tab.content27,
+#tab28:checked  ~ .tab.content28,
+#tab29:checked  ~ .tab.content29,
+#tab30:checked  ~ .tab.content30 { display: block; }
+
+input.tab-head + label.tab-head {
+  border: 1px solid #999;
+  background: #EEE;
+  padding: 4px 12px;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  top: 1px;
+}
+input.tab-head:checked + label.tab-head {
+  background: #FFF;
+  border-bottom: 1px solid transparent;
+}
+input.tab-head ~ .tab {
+  border-top: 1px solid #999;
+  padding: 12px;
+}
+
+label.tab-head  { margin-bottom: 0 }
+
+
+img {
+  margin-bottom: 0.8rem;
+}
+
+.inlineimage {
+  margin: 0;
+  vertical-align: baseline;
+}
+
+.sidenote > img  {
+}
+
+.figure > img {
+  margin-bottom: 0.8rem;
+}
+
+.svgobj {
+}
+
+.centered .svgobj {
+    margin-left:  auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+.centered .figcaption {
+    margin-left:  auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+.indented  {
+    margin-left:  3rem;
+    margin-right: auto;
+    display: block;
+}
+
+
+.sidenote, .marginnote {
+    /* border: 1px solid blue; */
+  /* The padding-right for div.paragraph is 17rem.
+     We move the note to the padding
+     with the negative margin-right.
+     The width needs to be smaller than the padding
+     to get a little whitespace between body and note. */
+  float: right;
+  clear: right;
+  padding-left:   2rem;
+  width:         15rem;
+  margin-right: -17rem;
+  margin-top: 0rem;
+  margin-bottom: 0;
+  font-size: 1.0rem;
+  line-height: 1.3;
+  vertical-align: baseline;
+  position: relative;
+}
+
+
+.hovernote {
+  position: relative;
+}
+
+.hovernotecontents:hover {
+  background: #f3f3fb;
+  transition-property: background;
+transition-duration: 0.2s;
+
+  border-radius: 8px;
+}
+
+.hovernotecontents { transition-property: background;
+transition-duration: 0.2s;
+
+}
+
+.hovernotenote {
+   transform: translateX(-50%);  text-align: center;
+   border-radius: 8px;
+   display: block;
+   min-width: 1000%;
+   position: absolute;
+   visibility: hidden;
+   z-index: 1;
+   background-color: gold;
+}
+
+.hovernotecontents:after {
+    content:     "\FEFF⁺";
+    margin-left: -0.20em;
+    font-size:   90%;
+    top:        -0.10em;
+    color:       #933;
+}
+
+.hovernote:hover .hovernotenote {
+  visibility: visible;
+  position: absolute;
+  left: 50%;
+  bottom: 105%;
+}
+
+
+
+.figure {
+  float: right;
+text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+margin-top:    0rem;
+   margin-botton: 0.5rem;
+   margin-left:   0.5rem;
+   margin-right:  0.5rem;
+
+   padding: 0.5em;
+}
+
+.figure_left {
+  float: left;
+text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+margin-top:    0rem;
+   margin-botton: 0.5rem;
+   margin-left:   0.5rem;
+   margin-right:  0.5rem;
+  padding: 0.5em;
+}
+
+.figure_center {
+  justify-content: center;
+text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+margin-top:    0rem;
+   margin-botton: 0.5rem;
+   margin-left:   0.5rem;
+   margin-right:  0.5rem;
+  padding: 0.5em;
+}
+
+
+a:hover {
+  background: #f3f3fb;
+  transition-property: background;
+transition-duration: 0.2s;
+
+  border-radius: 8px;
+}
+
+a { transition-property: background;
+transition-duration: 0.2s;
+
+}
+
+a.external:after {
+    content:     "\FEFF °";
+    margin-left: 0.10em;
+    font-size:   90%;
+    top:        -0.10em;
+    color:       #933;
+}
+
+a.internal:after {
+    content:     "\FEFF °";
+    margin-left: 0.10em;
+    font-size:   90%;
+    top:        -0.10em;
+    color:       #339;
+}
+
+/* terms linked to the docs.racket.org with `tech` has the techoutside class. */
+a.techoutside {
+    text-decoration: underline;
+    text-decoration-color: rgb(210,210,255);
+}
+
+payload-tag.payload-class {
+
+    width:     34.5rem;
+    margin-left: 0rem;
+}
+
+.payload-class p {
+  margin-left: 0;
+  width: inherit;
+  margin-right: 0;
+}
+
+
+table {
+    display: table;
+    border-collapse: collapse;
+}
+
+.centered table{
+    margin-left:  auto;
+    margin-right: auto;
+}
+
+
+th, td {
+    border: 1px solid black;
+}
+
+td {
+  padding: 4px;
+}
+
+
+span.italic      { font-style:  italic      }
+span.normal      { font-style:  normal      }
+span.oblique     { font-style:  oblique     }
+span.intial      { font-style:  initial     }
+span.bold        { font-weight: bold        }
+span.bolder      { font-weight: bolder      }
+span.lighter     { font-weight: lighter     }
+span.smallcaps   { font-variant: small-caps }
+span.typewriter  { font-family:  monospace;
+                   font-size:    90%;
+}
+span.superscript { vertical-align: super;
+                   font-size: 80% }
+span.subscript   { vertical-align: sub;
+                   font-size: 80% }
+img.centered     { display: block;
+                   margin-left:  auto;
+                   margin-right: auto;
+}
+
+
+
+#sidemenu {
+  margin-left:   2rem;
+  padding-right: 1rem;
+  border-right:  1px dashed black;
+}
+
+#doc.multi {
+  overflow: auto;
+}
+
+#sidemenu {
+  width: 17rem;
+  }
+
+#sidemenu .topnavigation {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  padding-top:   1rem;
+
+}
+
+#sidemenu .sidemenu_vertical_line {
+    margin-top:   4px;
+    border-left:  1px solid;
+    padding-left: 4px;
+    margin-left:  6px;
+}
+
+#sidemenu .toc_header {
+  /* display: none; */
+    font-feature-settings: 'ss04' 1;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size:     0.8rem;
+    line-height:   1.1;
+    margin-top:    0.50rem;
+    margin-bottom: 0.25rem;
+    clear:         both;
+    width:         auto;
+}
+
+
+#sidemenu  .toc_entry {
+  margin-bottom: 0.2rem;
+}
+
+
+#sidemenu ol { list-style-type:  none }
+
+#sidemenu nav {
+  margin-bottom: 2rem;
+}
+
+#doc nav {
+
+    width:     34.5rem;
+    margin-left: 0rem;
+  margin-bottom: 2rem;
+}
+
+#doc nav > ol { list-style-type: none }
+
+.toc li  { clear: both }
+
+.toc_numbering {
+  float:       left;
+  width:       3rem;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+toc_entry { }
+
+span.toc_chapter {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
+span.toc_section {
+  margin-left: 0.6rem;
+}
+span.toc_subsection {
+  margin-left: 0.6rem;
+}
+
+
+
+.list_of_figures li  { clear: both }
+
+span.lof_entry {
+  /*  font-family: 'Nunito Sans', sans-serif; */
+  /*  font-weight: bold; */
+}
+
+lof_entry {
+  margin-left: 0.6rem; }
+
+lof { }
+
+.lof li  { clear: both }
+
+.lof_numbering {
+  float:       left;
+  width:       3rem;
+  white-space: nowrap;
+}
+
+
+
+
+
+@media print {
+      body, article {
+        width:   100%;
+        margin:  0cm;
+        padding: 0cm;
+   }
+
+   @page {
+      margin: 2cm;
+   }
+
+   .pagebreak { page-break-before: always;
+   }
+   a { text-decoration: underline;
+   }
+
+}
+
+
+
+
+
+
+@page:right{
+  @bottom-right {
+    content: Side counter(page);
+  }
+}
+
+@page:left{
+  @bottom-left {
+    content: Side counter(page);
+  }
+}
+
+@media print {
+
+  html, body {
+    /* The width of 200mm is subtle. A4 has the width 210mm.
+       Using 200mm here means we get 10mm to the right of sidenotes.
+       We can't use margin-right on sidenotes, since we are floating
+       them with a negative margin.
+       In the browser: print with 0mm as left and right margins. */
+    width:      210mm;
+    height:     297mm;
+    color:      #000;
+    background: #fff;
+    font-size:  14pt;
+
+    margin-left:  -2cm;
+  }
+
+/* The rules together will show the margin.
+   Use them to the default print margins Chrome. */
+
+/* html { background-color: lightblue; }
+   body { background-color: white;}
+*/
+
+  #doc {
+  }
+
+  img {
+    margin-bottom: 0.8rem;
+  }
+
+  div.part, div.chapter, div.index {
+    page-break-before: always;
+    break-before: always;
+  }
+
+  div.book, div.chapter, div.section, div.subsection {
+    page-break-after:  avoid;   page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  img {
+    page-break-inside: avoid;
+    page-break-after:  avoid;
+  }
+  blockquote, table, pre {
+    page-break-inside: avoid;
+  }
+  ul, ol, dl  {
+    page-break-before: avoid;
+  }
+
+  /* print */
+  .sidenote, .marginnote {
+    /* border: 1px solid blue; */
+    /* The padding-right for #doc is 20wh.
+       We move the note to the padding
+       with the negative margin-right.
+       The width needs to be smaller than the padding
+       to get a little whitespace between body and note. */
+    float: right;
+    clear: right;
+    padding-left:   2rem;
+    width:         15rem;
+    margin-right: -17rem;
+    margin-top: 0rem;
+    margin-bottom: 0;
+    font-size: 1.0rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+}
+
+}
+
+/* When p is used as an outer container we we need
+   to make it display inline. */
+
+p.from_scribble {
+  display: inline;
+  font-size: 0.9rem;
+}
+
+/* Our normal blockquote for text quotations is set to 0.8rem,
+which is bit too small for code. */
+
+blockquote.SCodeFlow {
+  font-size:    0.9rem;
+}
+
+
+
+/* See the beginning of "scribble.css". */
+
+/* Monospace: */
+.RktIn, .RktRdr, .RktPn, .RktMeta,
+.RktMod, .RktKw, .RktVar, .RktSym,
+.RktRes, .RktOut, .RktCmt, .RktVal,
+.RktBlk {
+  font-family: monospace;
+  white-space: inherit;
+  }
+
+.RktVal {
+  white-space: nowrap;
+}
+
+/* Serif: */
+.inheritedlbl {
+  font-family: serif;
+}
+
+/* Sans-serif: */
+.RBackgroundLabelInner {
+  font-family: sans-serif;
+}
+
+/* ---------------------------------------- */
+/* Inherited methods, left margin */
+
+.inherited {
+  width: 100%;
+  margin-top: 0.5em;
+  text-align: left;
+  background-color: #ECF5F5;
+}
+
+.inherited td {
+  font-size: 82%;
+  padding-left: 1em;
+  text-indent: -0.8em;
+  padding-right: 0.2em;
+}
+
+.inheritedlbl {
+  font-style: italic;
+}
+
+/* ---------------------------------------- */
+/* Racket text styles */
+
+.RktIn {
+  color: #cc6633;
+  background-color: #eeeeee;
+}
+
+.RktInBG {
+  background-color: #eeeeee;
+}
+
+.RktRdr {
+}
+
+.RktPn {
+  color: #843c24;
+}
+
+.RktMeta {
+  color: black;
+}
+
+.RktMod {
+  color: black;
+}
+
+.RktOpt {
+  color: black;
+}
+
+.RktKw {
+  color: black;
+}
+
+.RktErr {
+  color: red;
+  font-style: italic;
+}
+
+.RktVar {
+  color: #262680;
+  font-style: italic;
+}
+
+.RktSym {
+  color: #262680;
+}
+
+.RktSymDef { /* used with RktSym at def site */
+}
+
+.RktValLink {
+  text-decoration: none;
+  color: blue;
+}
+
+.RktValDef { /* used with RktValLink at def site */
+}
+
+.RktModLink {
+  text-decoration: none;
+  color: blue;
+}
+
+.RktStxLink {
+  text-decoration: none;
+  color: #07A;
+}
+
+
+
+.RktStxDef { /* used with RktStxLink at def site */
+}
+
+.RktRes {
+  color: #0000af;
+}
+
+.RktOut {
+  color: #960096;
+}
+
+.RktCmt {
+  color: #c2741f;
+}
+
+.RktVal {
+  color: #228b22;
+}
+
+/* ---------------------------------------- */
+/* Some inline styles */
+
+.together {
+  width: 100%;
+}
+
+.prototype, .argcontract, .RBoxed {
+  white-space: nowrap;
+}
+
+.prototype td {
+  vertical-align: text-top;
+}
+
+.RktBlk {
+  white-space: inherit;
+  text-align: left;
+}
+
+.RktBlk tr {
+  white-space: inherit;
+}
+
+.RktBlk td {
+  vertical-align: baseline;
+  white-space: inherit;
+}
+
+.argcontract td {
+  vertical-align: text-top;
+}
+
+.highlighted {
+  background-color: #ddddff;
+}
+
+.defmodule {
+  width: 100%;
+  background-color: #F5F5DC;
+}
+
+.specgrammar {
+  float: right;
+}
+
+.RBibliography td {
+  vertical-align: text-top;
+}
+
+.leftindent {
+ margin-left: 1em;
+ margin-right: 0em;
+}
+
+.insetpara {
+ margin-left: 1em;
+ margin-right: 1em;
+}
+
+.Rfilebox {
+}
+
+.Rfiletitle {
+  text-align: right;
+  margin: 0em 0em 0em 0em;
+}
+
+.Rfilename {
+  border-top: 1px solid #6C8585;
+  border-right: 1px solid #6C8585;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #ECF5F5;
+}
+
+.Rfilecontent {
+  margin: 0em 0em 0em 0em;
+}
+
+.RpackageSpec {
+  padding-right: 0.5em;
+}
+
+/* ---------------------------------------- */
+/* For background labels */
+
+.RBackgroundLabel {
+   float: right;
+   width: 0px;
+   height: 0px;
+}
+
+.RBackgroundLabelInner {
+   position: relative;
+   width: 25em;
+   left: -25.5em;
+   top: 0px;
+   text-align: right;
+   color: white;
+   z-index: 0;
+   font-weight: bold;
+}
+
+.RForeground {
+   position: relative;
+   left: 0px;
+   top: 0px;
+   z-index: 1;
+}
+
+/* ---------------------------------------- */
+/* History */
+
+.SHistory {
+  font-size: 82%;
+}
+
+.SCodeFlow p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+blockquote td {
+  border-style: none;
+  border: 0px solid "white";
+}
+
+.SCodeFlow td {
+  padding: 0;
+}
+
+.hspace {
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+
+/* See the beginning of "scribble.css".
+   This file is used by the `scribble/manual` language, along with
+   "manual-racket.css". */
+
+
+/* Monospace: */
+.maincolumn, .refpara, .refelem, .tocset, .refparaleft, .refelemleft {
+    font-family: monospace;
+    white-space: inherit;
+    font-size: 1rem;
+}
+
+.stt {
+    font-family: monospace;
+    white-space: inherit;
+    font-size: 0.9rem;
+}
+
+
+
+span.stt {
+    font-family: monospace;
+    /*     font-size: 2.3rem; */
+    /* prevent automatic bolding from h2 */
+    font-weight: 400;
+}
+
+blockquote.SubFlow {
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* ---------------------------------------- */
+/* Racket text styles */
+
+.RktIn {
+  color: #cc6633;
+  background-color: #eee;
+}
+
+.RktInBG {
+  background-color: #eee;
+}
+
+
+.refcolumn .RktInBG {
+  background-color: white;
+}
+
+.RktRdr {
+}
+
+.RktPn {
+  color: #843c24;
+}
+
+.RktMeta {
+  color: black;
+}
+
+.RktMod {
+  color: inherit;
+}
+
+.RktOpt {
+  color: black;
+  font-style: italic;
+}
+
+.RktKw {
+  color: black;
+}
+
+.RktErr {
+  color: red;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.RktVar {
+    position: relative;
+    left: -1px; font-style: italic;
+    color: #444;
+}
+
+.SVInsetFlow .RktVar {
+    font-weight: 400;
+    color: #444;
+}
+
+
+.RktSym {
+   color: inherit;
+}
+
+
+
+.RktValLink, .RktStxLink, .RktModLink {
+  text-decoration: none;
+    color: #07A;
+    font-size: 0.9rem;
+    }
+
+.RktRes {
+  color: #0000af;
+}
+
+.RktOut {
+  color: #960096;
+}
+
+.RktCmt {
+  color: #c2741f;
+}
+
+.RktVal {
+  color: #228b22;
+}
+
+
+/* for syntax links within headings */
+h2 a.RktStxLink, h3 a.RktStxLink, h4 a.RktStxLink, h5 a.RktStxLink,
+h2 a.RktValLink, h3 a.RktValLink, h4 a.RktValLink, h5 a.RktValLink,
+h2 .RktSym, h3 .RktSym, h4 .RktSym, h5 .RktSym,
+h2 .RktMod, h3 .RktMod, h4 .RktMod, h5 .RktMod,
+h2 .RktVal, h3 .RktVal, h4 .RktVal, h5 .RktVal,
+h2 .RktPn, h3 .RktPn, h4 .RktPn, h5 .RktPn {
+    color: #333;
+    font-size: 1.50rem;
+    font-weight: 400;
+}
+
+blockquote > blockquote.SVInsetFlow {
+/* resolves issue in e.g. /reference/notation.html */
+    margin-top: 0em;
+}
+
+.leftindent .SVInsetFlow { /* see e.g. section 4.5 of Racket Guide */
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.SVInsetFlow a, .SCodeFlow a {
+    color: #07A;
+}
+
+.SubFlow {
+    display: block;
+    margin: 0em;
+}
+
+.boxed {
+    margin: 0;
+    /* margin-top: 2em; */
+    padding: 0.25em;
+    padding-top: 0.3em;
+    padding-bottom: 0.4em;
+    background: #f3f3f3;
+    box-sizing:border-box;
+    border-top: 1px solid #99b;
+    background: hsl(216, 78%, 95%);
+    background: -moz-linear-gradient(to bottom left, hsl(0, 0%, 99%) 0%, hsl(216, 62%, 95%) 100%);
+    background: -webkit-linear-gradient(to bottom left, hsl(0, 0%, 99%) 0%, hsl(216, 62%, 95%) 100%);
+    background: -o-linear-gradient(to bottom left, hsl(0, 0%, 99%) 0%, hsl(216, 62%, 95%) 100%);
+    background: -ms-linear-gradient(to bottom left, hsl(0, 0%, 99%) 0%, hsl(216, 62%, 95%) 100%);
+    background: linear-gradient(to bottom left, hsl(0, 0%, 99%) 0%, hsl(216, 62%, 95%) 100%);
+}
+
+.prototype, .argcontract, .RBoxed {
+  white-space: nowrap;
+}
+
+.SVInsetFlow {
+  line-height: 0.6rem;
+}
+
+.paragraph.framed { padding: 0.5rem;
+                    border: 1px solid black;
+                    margin-left:  3rem;
+                    width:  27rem;
+                    display: block;
+
+}
+.paragraph.framed > blockquote.SCodeFlow { padding: 1rem;
+}
+.paragraph.framed { padding: 0.5rem;
+                    border: 1px solid black;
+                    margin-left:  3rem;
+                    width:  27rem;
+                    display: block;
+
+}
+.paragraph.framed > blockquote.SCodeFlow { padding: 1rem;
+}
+.paragraph.framed { padding: 0.5rem;
+                    border: 1px solid black;
+                    margin-left:  3rem;
+                    width:  27rem;
+                    display: block;
+
+}
+.paragraph.framed > blockquote.SCodeFlow { padding: 1rem;
+}
+.paragraph.framed { padding: 0.5rem;
+                    border: 1px solid black;
+                    margin-left:  3rem;
+                    width:  27rem;
+                    display: block;
+
+}
+.paragraph.framed > blockquote.SCodeFlow { padding: 1rem;
+}
+.paragraph.framed { padding: 0.5rem;
+                    border: 1px solid black;
+                    margin-left:  3rem;
+                    width:  27rem;
+                    display: block;
+
+}
+.paragraph.framed > blockquote.SCodeFlow { padding: 1rem;
+}
+.paragraph.framed { padding: 0.5rem;
+                    border: 1px solid black;
+                    margin-left:  3rem;
+                    width:  27rem;
+                    display: block;
+
+}
+.paragraph.framed > blockquote.SCodeFlow { padding: 1rem;
+}
+.paragraph.framed { padding: 0.5rem;
+                    border: 1px solid black;
+                    margin-left:  3rem;
+                    width:  27rem;
+                    display: block;
+
+}
+.paragraph.framed > blockquote.SCodeFlow { padding: 1rem;
+}
+.paragraph.framed { padding: 0.5rem;
+                    border: 1px solid black;
+                    margin-left:  3rem;
+                    width:  27rem;
+                    display: block;
+
+}
+.paragraph.framed > blockquote.SCodeFlow { padding: 1rem;
+}
+.paragraph.framed { padding: 0.5rem;
+                    border: 1px solid black;
+                    margin-left:  3rem;
+                    width:  27rem;
+                    display: block;
+
+}
+.paragraph.framed > blockquote.SCodeFlow { padding: 1rem;
+}

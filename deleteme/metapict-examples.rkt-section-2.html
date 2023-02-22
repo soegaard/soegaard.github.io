@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+ <html lang="da">
+ <head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- The above 3 meta tags *must* come first in the head;
+      any other head content must come *after* these tags -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Merriweather&family=Merriweather+Sans&family=Nunito&family=Nunito+Sans&family=Quattrocento&family=Quattrocento+Sans&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&display=swap" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Crimson+Pro:regular,bold,italic">
+ <link rel="stylesheet" type="text/css" media="all" href="stylesheet.css">
+ <script >
+      MathJax = { tex:       {packages:    {'[+]': ['physics' ]},
+                              inlineMath:  [ ['$','$'],   ["\\(","\\)"] ],
+                              displayMath: [ ['$$','$$'], ["\\[","\\]"] ]},
+                  svg:       {scale: 1},
+                  loader:    {load: ['[tex]/physics' ]},
+                  styles:    {".MathJax_SVG_Display":
+                                 { "text-align":       "center",
+                                   "margin":           "0.25em 0em ! important"}}
+                };
+   </script>
+<script>
+function toggleElement(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function toggleTwoElements(id1, id2) {
+  toggleElement(id1);
+  toggleElement(id2);
+}
+</script>
+   <title>(The Metapict Blog)</title>
+ </head>
+ <body>
+<div style="display: flex; height: 100vh;">
+   <div id="sidemenu">
+     <div class="sidemenu"><span class="topnavigation"><a href="metapict-examples.rkt-book-1.html">← Prev</a><a href="metapict-examples.rkt-book-1.html">Up</a><a href="metapict-examples.rkt-section-3.html">Next →</a></span><div class="sidemenutoc"><nav id="toc"><div id="toggleid2a" class="toc_header"><div style="display: inline;"><div><a onclick="toggleTwoElements('toggleid2a','toggleid2b')">▼</a><a href="metapict-examples.rkt-book-1.html">The Metapict Blog</a></div></div>
+<div class="sidemenu_vertical_line"><ol class="toc" role="directory"><li class="toc_entry"><a href="metapict-examples.rkt-section-2.html#1"><div style="display: flex; justify-content: flex-start;"><span class="toc_numbering" style="flex-shrink: 0; flex-grow: 0;">1</span>
+<span class="toc_section">Introduction</span></div></a></li><li class="toc_entry"><a href="metapict-examples.rkt-section-3.html#2"><div style="display: flex; justify-content: flex-start;"><span class="toc_numbering" style="flex-shrink: 0; flex-grow: 0;">2</span>
+<span class="toc_section">Arrows</span></div></a></li><li class="toc_entry"><a href="metapict-examples.rkt-section-4.html#3"><div style="display: flex; justify-content: flex-start;"><span class="toc_numbering" style="flex-shrink: 0; flex-grow: 0;">3</span>
+<span class="toc_section">Regular polygons</span></div></a></li><li class="toc_entry"><a href="metapict-examples.rkt-section-5.html#4"><div style="display: flex; justify-content: flex-start;"><span class="toc_numbering" style="flex-shrink: 0; flex-grow: 0;">4</span>
+<span class="toc_section">Venn Diagrams</span></div></a></li><li class="toc_entry"><a href="metapict-examples.rkt-section-6.html#5"><div style="display: flex; justify-content: flex-start;"><span class="toc_numbering" style="flex-shrink: 0; flex-grow: 0;">5</span>
+<span class="toc_section">Simple Block Diagrams - Passes in Racket</span></div></a></li><li class="toc_entry"><a href="metapict-examples.rkt-section-7.html#6"><div style="display: flex; justify-content: flex-start;"><span class="toc_numbering" style="flex-shrink: 0; flex-grow: 0;">6</span>
+<span class="toc_section">Clock</span></div></a></li><li class="toc_entry"><a href="metapict-examples.rkt-section-8.html#7"><div style="display: flex; justify-content: flex-start;"><span class="toc_numbering" style="flex-shrink: 0; flex-grow: 0;">7</span>
+<span class="toc_section">Convex Hull</span></div></a></li></ol>
+<a href="metapict-examples.rkt-the-index-table-9.html#index"><span class="toc_title">Index</span></a></div></div>
+<div id="toggleid2b" class="toc_header"><div style="display: none;"><div><a onclick="toggleTwoElements('toggleid2a','toggleid2b')">▶<a href="metapict-examples.rkt-book-1.html">The Metapict Blog</a></a></div></div></div></nav><b>THIS PAGE</b><nav id="toc"><div id="toggleid3a" class="toc_header"><div style="display: inline;"><div><a onclick="toggleTwoElements('toggleid3a','toggleid3b')">▼</a><a href="metapict-examples.rkt-section-2.html#1"><div style="display: flex; justify-content: flex-start;"><span class="toc_numbering" style="flex-shrink: 0; flex-grow: 0;">1</span>
+<span class="toc_section">Introduction</span></div></a></div></div>
+<div class="sidemenu_vertical_line"><ol class="toc" role="directory"></ol>
+</div></div>
+<div id="toggleid3b" class="toc_header"><div style="display: none;"><div><a onclick="toggleTwoElements('toggleid3a','toggleid3b')">▶<a href="metapict-examples.rkt-section-2.html#1"><div style="display: flex; justify-content: flex-start;"><span class="toc_numbering" style="flex-shrink: 0; flex-grow: 0;">1</span>
+<span class="toc_section">Introduction</span></div></a></a></div></div></div></nav></div></div>
+   </div>
+   <div id="doc" class="multi">
+     <a name="1"></a><div class="section">1.  Introduction</div><div class="paragraph">This blog features small programs using Metapict to draw figures and images.
+
+Write to Jens Axel Søgaard at <span class="typewriter">jensaxel@soegaard.net</span> with comments and wishes for new topics.</div>
+   </div>
+ </div>
+ <script id="MathJax-script" async
+       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js">
+ </script>
+ </body>
+ </html>
